@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+
+                <td>{{ product.errCode }}</td>
+                <td>{{ product.statusData.value }}</td>
+                <td>{{ product.brandData.value }}</td>
+                <td>{{ product.categoryData.value }}</td>
+                <td>
+                    <ul>
+                        {% for detail in product.productDetail %}
+                        <li>{{ detail.nameDetail }} - {{ detail.discountPrice }} USD</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

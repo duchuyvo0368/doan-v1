@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=null - MYSQL_DATABASE=ecom
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+  app:
+    depends_on:
+      - mysqldb
+    build: ./ecomAPI
+    restart: unless-stopped
+    ports:
+      - 8003:8003
+    environment:
+      - DB_HOST=mysqldb
+      - DB_USER=root
+      - DB_NAME=ecom
+      - DB_PORT=3306
+    stdin_open: true
+    tty: true
+
+volumes:
+  db:
