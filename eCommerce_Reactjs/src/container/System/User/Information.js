@@ -93,7 +93,7 @@ const Information = () => {
         let data = event.target.files;
         let file = data[0];
         if(file.size > 31312281){
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else{
             let base64 = await CommonUtils.getBase64(file);
@@ -129,19 +129,19 @@ const Information = () => {
                 <div className="col-md-6 border-right">
                     <div className="p-3 py-5">
                         <div className="d-flex justify-content-between align-items-center mb-3">
-                            <h4 className="text-right">Thông tin cá nhân</h4>
+                            <h4 className="text-right">Profile</h4>
                         </div>
                         <div className="row mt-2">
-                            <div className="col-md-6"><label className="labels">Họ</label><input name="firstName" onChange={(event) => handleOnChange(event)} value={inputValues.firstName} type="text" className="form-control" /></div>
-                            <div className="col-md-6"><label className="labels">Tên</label><input name="lastName" onChange={(event) => handleOnChange(event)} value={inputValues.lastName} type="text" className="form-control" /></div>
+                            <div className="col-md-6"><label className="labels">Firs name</label><input name="firstName" onChange={(event) => handleOnChange(event)} value={inputValues.firstName} type="text" className="form-control" /></div>
+                            <div className="col-md-6"><label className="labels">LastName</label><input name="lastName" onChange={(event) => handleOnChange(event)} value={inputValues.lastName} type="text" className="form-control" /></div>
                         </div>
                         <div className="row mt-3">
-                            <div className="col-md-12"><label className="labels">Số điện thoại</label><input name="phoneNumber" onChange={(event) => handleOnChange(event)} type="text" className="form-control" value={inputValues.phoneNumber} /></div>
-                            <div className="col-md-12"><label className="labels">Địa chỉ</label><input name="address" onChange={(event) => handleOnChange(event)} type="text" className="form-control" value={inputValues.address} /></div>
+                            <div className="col-md-12"><label className="labels">Phone</label><input name="phoneNumber" onChange={(event) => handleOnChange(event)} type="text" className="form-control" value={inputValues.phoneNumber} /></div>
+                            <div className="col-md-12"><label className="labels">Address</label><input name="address" onChange={(event) => handleOnChange(event)} type="text" className="form-control" value={inputValues.address} /></div>
 
                         </div>
                         <div className="row mt-3">
-                            <div className="col-md-6"><label className="labels">Giới tính</label><select value={inputValues.genderId} name="genderId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
+                            <div className="col-md-6"><label className="labels">Gender</label><select value={inputValues.genderId} name="genderId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                 {dataGender && dataGender.length > 0 &&
                                     dataGender.map((item, index) => {
                                         return (
@@ -150,24 +150,24 @@ const Information = () => {
                                     })
                                 }
                             </select></div>
-                            <div className="col-md-6"><label className="labels">Ngày sinh</label> <DatePicker className="form-control" onChange={handleOnChangeDatePicker}
+                            <div className="col-md-6"><label className="labels">Birthday</label> <DatePicker className="form-control" onChange={handleOnChangeDatePicker}
                                 value={birthday}
 
                             /></div>
                         </div>
                         <div className="row mt-2">
                             <div className="col-md-3">
-                                <label className="labels">Chọn ảnh</label>
+                                <label className="labels">Preview Image</label>
                                 <input type="file" id="previewImg" accept=".jpg,.png"
                                     hidden onChange={(event) => handleOnChangeImage(event)}
                                 />
                                 <label style={{ backgroundColor: '#eee', borderRadius: '5px', padding: '6px', cursor: 'pointer' }} className="label-upload" htmlFor="previewImg"
 
-                                >Tải ảnh <i className="fas fa-upload"></i></label>
+                                >Upload <i className="fas fa-upload"></i></label>
 
                             </div>
                         </div>
-                        <div onClick={() => handleSaveInfor()} className="mt-5 text-center"><button className="btn btn-primary profile-button" type="button">Lưu thông tin</button></div>
+                        <div onClick={() => handleSaveInfor()} className="mt-5 text-center"><button className="btn btn-primary profile-button" type="button">Save</button></div>
                     </div>
                 </div>
 

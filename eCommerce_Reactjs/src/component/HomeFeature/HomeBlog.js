@@ -5,7 +5,7 @@ function HomeBlog(props) {
     return (
         <section className="blog-area section-gap">
             <div className="container">
-                <HeaderContent mainContent="Blog mới đăng" infoContent="Bring called seed first of third give itself now ment"></HeaderContent>
+                <HeaderContent mainContent="latest blog" infoContent="Bring called seed first of third give itself now ment"></HeaderContent>
                 <div className="row">
                     {props.data && props.data.length > 0 &&
                         props.data.map((item,index) =>{

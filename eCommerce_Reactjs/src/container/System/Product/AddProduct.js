@@ -40,7 +40,7 @@ const AddProduct = (props) => {
         let data = event.target.files;
         let file = data[0];
         if(file.size > 31312281){
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else{
         
@@ -112,7 +112,7 @@ const AddProduct = (props) => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý sản phẩm</h1>
+            <h1 className="mt-4">Product management</h1>
 
 
             <div className="card mb-4">
@@ -124,7 +124,7 @@ const AddProduct = (props) => {
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Tên sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product Name</label>
                                 <input type="text" value={inputValues.name} name="name" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
@@ -138,7 +138,7 @@ const AddProduct = (props) => {
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Danh mục sản phẩm</label>
+                                <label htmlFor="inputEmail4">Category sản phẩm</label>
                                 <select value={inputValues.categoryId} name="categoryId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataCategory && dataCategory.length > 0 &&
                                         dataCategory.map((item, index) => {
@@ -175,7 +175,7 @@ const AddProduct = (props) => {
 
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Tên loại sản phẩm</label>
+                                <label htmlFor="inputEmail4">Name loại sản phẩm</label>
                                 <input type="text" value={inputValues.nameDetail} name="nameDetail" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
@@ -232,7 +232,7 @@ const AddProduct = (props) => {
                             </div>
                         </div>
 
-                        <button onClick={() => handleSaveProduct()} type="button" className="btn btn-primary">Lưu thông tin</button>
+                        <button onClick={() => handleSaveProduct()} type="button" className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

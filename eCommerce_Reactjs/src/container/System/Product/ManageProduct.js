@@ -120,19 +120,19 @@ const ManageProduct = () => {
             offset: ''
         })
         if(res && res.errCode == 0){
-            await CommonUtils.exportExcel(res.data,"Danh sách sản phẩm","ListProduct")
+            await CommonUtils.exportExcel(res.data,"Product list","ListProduct")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý sản phẩm</h1>
+            <h1 className="mt-4">Product management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách sản phẩm
+                    Product list
 
                 </div>
              
@@ -144,7 +144,7 @@ const ManageProduct = () => {
                     <div  className='col-4'>
                     <FormSearch title={"tên sản phẩm"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchProduct} />                    </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -152,14 +152,14 @@ const ManageProduct = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Danh mục</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
                                     <th>Nhãn hàng</th>
                                     <th>Chất liệu</th>
                                     <th>Được làm bởi</th>
                                     <th>Lượt xem</th>
-                                    <th>Trạng thái</th>
-                                    <th>Thao tác</th>
+                                    <th>Status</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -203,8 +203,8 @@ const ManageProduct = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

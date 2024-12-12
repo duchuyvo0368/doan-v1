@@ -59,7 +59,7 @@ const AddBlog = (props) => {
         let data = event.target.files;
         let file = data[0];
         if(file.size > 31312281){
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else{
             let base64 = await CommonUtils.getBase64(file);
@@ -85,7 +85,7 @@ const AddBlog = (props) => {
                 userId: JSON.parse(localStorage.getItem('userData')).id
             })
             if (res && res.errCode === 0) {
-                toast.success("Tạo mới bài đăng thành công !")
+                toast.success("New post created successfully !")
                 setInputValues({
                     ...inputValues,
                     ["shortDescription"]: '',
@@ -96,7 +96,7 @@ const AddBlog = (props) => {
                     ["contentHTML"]: '',
                     ["imageReview"]: ''
                 })
-            } else toast.error("Tạo mới bài đăng thất bại")
+            } else toast.error("Creating new post failed")
         } else {
             let res = await updateBlogService({
                 shortDescription: inputValues.shortDescription,
@@ -108,9 +108,9 @@ const AddBlog = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật bài đăng thành công !")
+                toast.success("Post updated successfully !")
 
-            } else toast.error("Cập nhật bài đăng thất bại")
+            } else toast.error("Post update failed")
         }
     }
     let handleEditorChange = ({ html, text }) => {
@@ -128,17 +128,17 @@ const AddBlog = (props) => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {inputValues.isActionADD === true ? 'Tạo mới bài đăng' : 'Cập nhật thông tin bài đăng'}
+                    {inputValues.isActionADD === true ? 'Create new post' : 'Update post information'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-3">
-                                <label htmlFor="inputEmail4">Tên bài đăng</label>
+                                <label htmlFor="inputEmail4">Post name</label>
                                 <input type="text" value={inputValues.title} name="title" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-3">
-                                <label htmlFor="inputEmail4">Chủ đề</label>
+                                <label htmlFor="inputEmail4">Topic</label>
                                 <select value={inputValues.subjectId} name="subjectId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataSubject && dataSubject.length > 0 &&
                                         dataSubject.map((item, index) => {
@@ -150,19 +150,19 @@ const AddBlog = (props) => {
                                 </select>
                             </div>
                             <div className="col-md-3 form-group">
-                                <label>Chọn hình ảnh</label>
+                                <label>Select image</label>
                                 <input accept=".jpg,.png" onChange={(event) => handleOnChangeImage(event)} type="file" className="form-control form-file" />
                             </div>
                             <div className="form-group col-md-3">
-                                <label htmlFor="inputEmail4">Hình ảnh hiển thị</label>
+                                <label htmlFor="inputEmail4">Image displayed</label>
                                 <div style={{ backgroundImage: `url(${inputValues.imageReview})` }} onClick={() => openPreviewImage()} className="box-img-preview"></div>
                             </div>
                             <div className="form-group col-md-12">
-                                <label htmlFor="inputAddress">Mô tả ngắn</label>
+                                <label htmlFor="inputAddress">Short description</label>
                                 <textarea rows="4" value={inputValues.shortDescription} name="shortDescription" onChange={(event) => handleOnChange(event)} className="form-control"></textarea>
                             </div>
                             <div className="form-group col-md-12">
-                                <label htmlFor="inputAddress">Nội dung bài đăng</label>
+                                <label htmlFor="inputAddress">Post content</label>
                                 <MdEditor
                                     style={{ height: '500px' }}
                                     renderHTML={text => mdParser.render(text)}
@@ -171,7 +171,7 @@ const AddBlog = (props) => {
                                 />
                             </div>
                         </div>
-                        <button onClick={() => handleSaveBlog()} type="button" className="btn btn-primary">Lưu thông tin</button>
+                        <button onClick={() => handleSaveBlog()} type="button" className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

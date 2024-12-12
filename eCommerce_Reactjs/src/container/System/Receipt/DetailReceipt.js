@@ -166,7 +166,7 @@ const DetailReceipt = (props) => {
                             </div>
                         </div>
 
-                        <button type="button" onClick={() => handleSaveReceiptDetail()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveReceiptDetail()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
                 <div className="card-header">
@@ -178,7 +178,7 @@ const DetailReceipt = (props) => {
                     <div className='row'>
 
                         <div className='col-12'>
-                            {/* <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success mb-2" >Xuất excel <i class="fa-solid fa-file-excel"></i></button> */}
+                            {/* <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success mb-2" >Export excel <i class="fa-solid fa-file-excel"></i></button> */}
                         </div>
                     </div>
                     <div className="table-responsive">
@@ -186,8 +186,8 @@ const DetailReceipt = (props) => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Mã đơn</th>
-                                    <th>Tên sản phẩm</th>
+                                    <th>Single code</th>
+                                    <th>Product Name</th>
                                     <th>Số lượng</th>
                                     <th>Đơn giá</th>
 

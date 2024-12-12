@@ -85,7 +85,7 @@ const ManageReceipt = () => {
                     <div className='row'>
                    
                     <div className='col-12'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success mb-2" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success mb-2" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -93,11 +93,11 @@ const ManageReceipt = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Ngày nhập hàng</th>
-                                    <th>Tên nhà cung cấp</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Tên nhân viên</th>
-                                    <th>Thao tác</th>
+                                    <th>Day nhập hàng</th>
+                                    <th>Supplier name</th>
+                                    <th>Phone</th>
+                                    <th>Name nhân viên</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -129,8 +129,8 @@ const ManageReceipt = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

@@ -100,23 +100,23 @@ const ManageOrder = () => {
                     <div className='row'>
 
                         <div className='col-12 mb-2'>
-                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                         </div>
                     </div>
                     <div className="table-responsive">
                         <table className="table table-bordered" style={{ border: '1' }} width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Mã đơn</th>
+                                    <th>Single code</th>
                                     <th>SDT</th>
                                     <th>Email</th>
-                                    <th>Ngày đặt</th>
-                                    <th>Loại ship</th>
-                                    <th>Mã voucher</th>
-                                    <th>Hình thức</th>
-                                    <th>Trạng thái</th>
+                                    <th>Booking date</th>
+                                    <th>Type of ship</th>
+                                    <th>Voucher code</th>
+                                    <th>Form</th>
+                                    <th>Status</th>
                                     <th>Shipper</th>
-                                    <th>Thao tác</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -152,8 +152,8 @@ const ManageOrder = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

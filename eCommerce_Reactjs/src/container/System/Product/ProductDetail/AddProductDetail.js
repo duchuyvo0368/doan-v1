@@ -32,7 +32,7 @@ const AddProductDetail = (props) => {
         let data = event.target.files;
         let file = data[0];
         if(file.size > 31312281){
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else{
             let base64 = await CommonUtils.getBase64(file);
@@ -96,7 +96,7 @@ const AddProductDetail = (props) => {
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Tên loại sản phẩm</label>
+                                <label htmlFor="inputEmail4">Name loại sản phẩm</label>
                                 <input type="text" value={inputValues.nameDetail} name="nameDetail" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
@@ -153,7 +153,7 @@ const AddProductDetail = (props) => {
                             </div>
                         </div>
 
-                        <button onClick={() => handleSaveProductDetail()} type="button" className="btn btn-primary">Lưu thông tin</button>
+                        <button onClick={() => handleSaveProductDetail()} type="button" className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

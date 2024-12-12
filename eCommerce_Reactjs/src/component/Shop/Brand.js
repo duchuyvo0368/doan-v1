@@ -29,7 +29,7 @@ function Brand(props) {
 
         <aside className="left_widgets p_filter_widgets">
             <div className="l_w_title">
-                <h3>Các thương hiệu</h3>
+                <h3>Brands</h3>
             </div>
             <div className="widgets_inner">
                 <ul className="list">

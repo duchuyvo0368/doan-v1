@@ -22,7 +22,7 @@ const FormSearch = (props) => {
         <form   >
         <div className="form-group">
             <div className="input-group mb-3">
-                <input onChange={(e) => handleOnchange(e.target.value)} value={keyword} type="text" className="form-control" placeholder={`Tìm kiếm theo ${props.title}`} />
+                <input onChange={(e) => handleOnchange(e.target.value)} value={keyword} type="text" className="form-control" placeholder={`Search by ${props.title}`} />
                 <div className="input-group-append">
                     <button onClick={() =>handleSearchProduct()}  className="btn" type="button"><i className="ti-search" /></button>
                 </div>

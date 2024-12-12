@@ -56,7 +56,7 @@ const ManageBanner = () => {
             }
         })
         if (response && response.errCode === 0) {
-            toast.success("Xóa băng rôn thành công !")
+            toast.success("Successfully removed the banner !")
             let arrData = await getAllBanner({
 
 
@@ -69,7 +69,7 @@ const ManageBanner = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
         } else {
-            toast.error("Xóa băng rôn thất bại")
+            toast.error("Banner deletion failed")
         }
     }
     let handleChangePage = async (number) => {
@@ -108,28 +108,28 @@ const ManageBanner = () => {
                 element.image = ""
             })
            
-           await CommonUtils.exportExcel(res.data,"Danh sách băng rôn","ListBanner")
+           await CommonUtils.exportExcel(res.data,"List of banners","ListBanner")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý băng rôn</h1>
+            <h1 className="mt-4">Banner management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách băng rôn
+                    List of banners
                 </div>
                 <div className="card-body">
                 
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tên băng rôn"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBanner} />
+                    <FormSearch title={"banner name"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBanner} />
                     </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -137,9 +137,9 @@ const ManageBanner = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên băng rôn</th>
-                                    <th>Hình ảnh</th>
-                                    <th>Thao tác</th>
+                                    <th>Banner name</th>
+                                    <th>Image</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -172,8 +172,8 @@ const ManageBanner = () => {
                     </div>
                 </div>
                 <ReactPaginate
-                    previousLabel={'Quay lại'}
-                    nextLabel={'Tiếp'}
+                    previousLabel={'Back'}
+                    nextLabel={'Next'}
                     breakLabel={'...'}
                     pageCount={count}
                     marginPagesDisplayed={3}

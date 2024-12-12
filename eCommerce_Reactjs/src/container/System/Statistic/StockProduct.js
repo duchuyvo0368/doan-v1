@@ -66,26 +66,26 @@ const StockProduct = () => {
 
         })
         if (res && res.errCode == 0) {
-            await CommonUtils.exportExcel(res.data, "Danh sách sản phẩm tồn kho", "ListOrder")
+            await CommonUtils.exportExcel(res.data, "Product list tồn kho", "ListOrder")
         }
 
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý sản phẩm tồn kho</h1>
+            <h1 className="mt-4">Product management tồn kho</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách sản phẩm tồn kho
+                    Product list tồn kho
                 </div>
 
                 <div className="card-body">
                     <div className='row'>
 
                         <div className='col-12 mb-2'>
-                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                         </div>
                     </div>
                     <div className="table-responsive">
@@ -93,8 +93,8 @@ const StockProduct = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên sản phẩm</th>
-                                    <th>Danh mục</th>
+                                    <th>Product Name</th>
+                                    <th>Category</th>
                                     <th>nhãn hàng</th>
                                     <th>Chất liệu</th>
                                     <th>Số lượng tồn</th>
@@ -128,8 +128,8 @@ const StockProduct = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

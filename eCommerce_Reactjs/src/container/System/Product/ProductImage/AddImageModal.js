@@ -55,7 +55,7 @@ const AddImageModal = (props) => {
         let data = event.target.files;
         let file = data[0];
         if(file.size > 31312281){
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else{
             let base64 = await CommonUtils.getBase64(file);
@@ -95,7 +95,7 @@ const AddImageModal = (props) => {
                 <ModalBody>
                     <div className="row">
                         <div className="col-12 form-group">
-                            <label>Tên hình ảnh</label>
+                            <label>Name hình ảnh</label>
                             <input value={inputValues.caption} name="caption" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
@@ -114,7 +114,7 @@ const AddImageModal = (props) => {
                         color="primary"
                         onClick={HandleSendDataFromModal}
                     >
-                        Lưu thông tin
+                        Save
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>

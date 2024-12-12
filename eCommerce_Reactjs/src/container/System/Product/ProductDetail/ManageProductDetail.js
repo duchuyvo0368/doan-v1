@@ -97,10 +97,10 @@ const ManageProductDetail = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên loại sản phẩm</th>
+                                    <th>Name loại sản phẩm</th>
                                     <th>Giá gốc</th>
                                     <th>Giá khuyến mãi</th>
-                                    <th>Thao tác</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -131,8 +131,8 @@ const ManageProductDetail = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

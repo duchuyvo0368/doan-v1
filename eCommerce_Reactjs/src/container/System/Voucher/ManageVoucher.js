@@ -102,7 +102,7 @@ const ManageVoucher = () => {
                 <div className='row'>
                    
                     <div className='col-12 mb-2'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -110,13 +110,13 @@ const ManageVoucher = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Mã voucher</th>
+                                    <th>Voucher code</th>
                                     <th>Loại voucher</th>
                                     <th>Số lượng</th>
                                     <th>Đã sử dụng</th>
-                                    <th>Ngày bắt đầu</th>
-                                    <th>Ngày kết thúc</th>
-                                    <th>Thao tác</th>
+                                    <th>Day bắt đầu</th>
+                                    <th>Day kết thúc</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -150,8 +150,8 @@ const ManageVoucher = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

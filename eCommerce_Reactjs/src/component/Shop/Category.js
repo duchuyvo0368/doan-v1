@@ -31,7 +31,7 @@ function Category(props) {
 
         <aside className="left_widgets p_filter_widgets">
             <div className="l_w_title">
-                <h3>Các danh mục</h3>
+                <h3>Categorys</h3>
             </div>
             <div className="widgets_inner">
                 <ul className="list">

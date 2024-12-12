@@ -60,7 +60,7 @@ const Message = () => {
                  <MessageDisscution userId={dataUser.id} isAdmin={true} handleClickRoom={handleClickRoom} data={dataRoom}/>
                  {selectedRoom ? <ChatWindow userId={dataUser.id} roomId={selectedRoom}  />
                  :<div>
-                    <span className='title'>Chưa chọn phòng</span>
+                    <span className='title'>Haven't selected a room yet</span>
                  </div> 
                 }
                 

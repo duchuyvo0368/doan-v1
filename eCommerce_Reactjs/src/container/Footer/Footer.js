@@ -46,7 +46,7 @@ function Footer(props) {
           </div>
           <div className="footer-bottom row align-items-center">
             <p className="footer-text m-0 col-lg-8 col-md-12">{/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-              Bản quyền ©2024 Đồ án tốt nghiệp của Võ Đức Huy <i className="fa fa-heart-o" aria-hidden="true" />  <a href="https://colorlib.com" target="_blank"></a>
+            Copyright ©2024 Vo Duc Huy's graduation project <i className="fa fa-heart-o" aria-hidden="true" />  <a href="https://colorlib.com" target="_blank"></a>
               {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}</p>
 
           </div>

@@ -125,7 +125,7 @@ function AddressUser(props) {
                                     <div className='content-left'>
                                         <div className='box-label'>
                                             <div className='label'>
-                                                <div>Họ Và Tên</div>
+                                                <div>Họ Và Name</div>
                                                 <div>Số Điện Thoại</div>
                                                 <div>Địa Chỉ</div>
                                             </div>

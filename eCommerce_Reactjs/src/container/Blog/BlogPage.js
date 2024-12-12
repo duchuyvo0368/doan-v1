@@ -95,12 +95,12 @@ let handleOnchangeSearch = (keyword) =>{
         <div class="container">
           <div class="banner_content d-md-flex justify-content-between align-items-center">
             <div class="mb-3 mb-md-0">
-              <h2>Tin tức</h2>
-              <p>Hãy theo dõi những bài viết để nhận được thông tin mới nhất</p>
+              <h2>Blog</h2>
+              <p> Very us move be blessed multiply night</p>
             </div>
             <div class="page_link">
-            <Link to={"/"}>Trang chủ</Link>
-             <Link to={"/blog"}>Tin tức</Link>
+            <Link to={"/"}>Home</Link>
+             <Link to={"/blog"}>Blog</Link>
             </div>
           </div>
         </div>
@@ -124,8 +124,8 @@ let handleOnchangeSearch = (keyword) =>{
                         </div>
                     
                          <ReactPaginate
-                         previousLabel={'Quay lại'}
-                         nextLabel={'Tiếp'}
+                         previousLabel={'Back'}
+                         nextLabel={'Next'}
                          breakLabel={'...'}
                          pageCount={count}
                          marginPagesDisplayed={3}

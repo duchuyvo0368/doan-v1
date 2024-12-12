@@ -54,7 +54,7 @@ handleSearchRoom(roomList)
         <div className="ks-discussions">
         <div className="ks-search">
           <div className="input-icon icon-right icon icon-lg icon-color-primary">
-            <input onChange={(e) => handleOnchangeSearch(e)} value={textSearch} id="input-group-icon-text" type="text" className="form-control" placeholder="Tìm kiếm theo tên" />
+            <input onChange={(e) => handleOnchangeSearch(e)} value={textSearch} id="input-group-icon-text" type="text" className="form-control" placeholder="Search by name" />
             <span className="icon-addon">
               <span className="la la-search" />
             </span>

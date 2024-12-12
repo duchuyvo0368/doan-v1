@@ -61,7 +61,7 @@ function InfoDetailProduct(props) {
                 quantity: quantityProduct,
             }))
         } else {
-            toast.error("Đăng nhập để thêm vào giỏ hàng")
+            toast.error("Login add item cart")
         }
 
     }

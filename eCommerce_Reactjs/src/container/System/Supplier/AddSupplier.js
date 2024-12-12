@@ -87,35 +87,35 @@ const AddSupplier = (props) => {
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý nhà cung cấp</h1>
+            <h1 className="mt-4">Supplier management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới nhà cung cấp' : 'Cập nhật thông tin nhà cung cấp'}
+                    {isActionADD === true ? 'Add new supplier' : 'Cập nhật thông tin nhà cung cấp'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Tên nhà cung cấp</label>
+                                <label htmlFor="inputEmail4">Supplier name</label>
                                 <input type="text" value={inputValues.name} name="name" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Địa chỉ email</label>
+                                <label htmlFor="inputPassword4">Address email</label>
                                 <input type="text" value={inputValues.email} name="email" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Địa chỉ</label>
+                                <label htmlFor="inputEmail4">Address</label>
                                 <input type="text" value={inputValues.address} name="address" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Số điện thoại</label>
+                                <label htmlFor="inputPassword4">Phone</label>
                                 <input type="text" value={inputValues.phoneNumber} name="phoneNumber" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
-                        <button type="button" onClick={() => handleSaveSupplier()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveSupplier()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

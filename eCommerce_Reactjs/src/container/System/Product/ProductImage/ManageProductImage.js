@@ -262,9 +262,9 @@ const ManageProductImage = () => {
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Tên hình ảnh</th>
+                                        <th>Name hình ảnh</th>
                                         <th>Hình ảnh</th>
-                                        <th>Thao tác</th>
+                                        <th>Operation</th>
                                     </tr>
                                 </thead>
 
@@ -310,8 +310,8 @@ const ManageProductImage = () => {
                     />
                 }
                 <ReactPaginate
-                    previousLabel={'Quay lại'}
-                    nextLabel={'Tiếp'}
+                    previousLabel={'Back'}
+                    nextLabel={'Next'}
                     breakLabel={'...'}
                     pageCount={count}
                     marginPagesDisplayed={3}
@@ -346,7 +346,7 @@ const ManageProductImage = () => {
                                         <th>Chiều dài</th>
                                         <th>Khối lượng</th>
                                         <th>Số lượng tồn</th>
-                                        <th>Thao tác</th>
+                                        <th>Operation</th>
                                     </tr>
                                 </thead>
 
@@ -392,8 +392,8 @@ const ManageProductImage = () => {
                     />
                 }
                 <ReactPaginate
-                    previousLabel={'Quay lại'}
-                    nextLabel={'Tiếp'}
+                    previousLabel={'Back'}
+                    nextLabel={'Next'}
                     breakLabel={'...'}
                     pageCount={countSize}
                     marginPagesDisplayed={3}

@@ -31,12 +31,12 @@ function ShopPage(props) {
                     <div className="container">
                         <div className="banner_content d-md-flex justify-content-between align-items-center">
                             <div className="mb-3 mb-md-0">
-                                <h2>Danh mục cửa hàng</h2>
-                                <p>Hãy lựa chọn sản phẩm phù hợp cho chính mình</p>
+                                <h2>Shop Category</h2>
+                                <p>Very us move be blessed multiply night</p>
                             </div>
                             <div className="page_link">
-                                <Link to={"/"}>Trang chủ</Link>
-                                <Link to={"/shop"}>Cửa hàng</Link>
+                                <Link to={"/"}>Home</Link>
+                                <Link to={"/shop"}>Shop</Link>
                                
                             </div>
                         </div>

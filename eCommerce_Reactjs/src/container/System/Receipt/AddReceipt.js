@@ -188,7 +188,7 @@ const AddReceipt = (props) => {
                             </div>
                         </div>
                        
-                        <button type="button" onClick={() => handleSaveReceipt()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveReceipt()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

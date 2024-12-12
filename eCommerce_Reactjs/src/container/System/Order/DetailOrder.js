@@ -155,7 +155,7 @@ function DetailOrder(props) {
                                                 <th scope="col">Sản phẩm</th>
                                                 <th scope="col">Giá</th>
                                                 <th style={{ textAlign: 'center' }} scope="col">Số lượng</th>
-                                                <th style={{ textAlign: 'center' }} scope="col">Tổng tiền</th>
+                                                <th style={{ textAlign: 'center' }} scope="col">Total amount</th>
 
                                             </tr>
                                         </thead>
@@ -201,7 +201,7 @@ function DetailOrder(props) {
                                         <span className="name-easier">Easier voucher</span>
 
 
-                                        <span className="choose-voucher">Mã voucher: {DataOrder && DataOrder.voucherData && DataOrder.voucherData.codeVoucher}</span>
+                                        <span className="choose-voucher">Voucher code: {DataOrder && DataOrder.voucherData && DataOrder.voucherData.codeVoucher}</span>
 
 
                                     </div>
@@ -250,15 +250,15 @@ function DetailOrder(props) {
                         {DataOrder && DataOrder.addressUser &&
                             <div className="wrap-bottom">
                                 <div className="box-flex">
-                                    <div className="head">Tên khách hàng</div>
+                                    <div className="head">Name khách hàng</div>
                                     <div >{DataOrder.addressUser.shipName}</div>
                                 </div>
                                 <div className="box-flex">
-                                    <div className="head">Số điện thoại</div>
+                                    <div className="head">Phone</div>
                                     <div >{DataOrder.addressUser.shipPhoneNumber}</div>
                                 </div>
                                 <div className="box-flex">
-                                    <div className="head">Địa chỉ email</div>
+                                    <div className="head">Address email</div>
                                     <div >{DataOrder.addressUser.shipEmail}</div>
                                 </div>
 
@@ -270,7 +270,7 @@ function DetailOrder(props) {
 
                         <div className="wrap-bottom">
                             <div className="box-flex">
-                                <div className="head">Tổng tiền hàng</div>
+                                <div className="head">Total amount hàng</div>
                                 <div >{CommonUtils.formatter.format(price)}</div>
                             </div>
                             <div className="box-flex">

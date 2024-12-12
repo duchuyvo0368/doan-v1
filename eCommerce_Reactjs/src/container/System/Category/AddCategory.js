@@ -89,15 +89,15 @@ const AddCategory = (props) => {
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Tên danh mục</label>
+                                <label htmlFor="inputEmail4">Category name</label>
                                 <input type="text" value={inputValues.value} name="value" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Mã code</label>
+                                <label htmlFor="inputPassword4">Code</label>
                                 <input type="text" value={inputValues.code} name="code" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
-                        <button type="button" onClick={() => handleSaveCategory()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveCategory()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

@@ -107,7 +107,7 @@ const ManageCategory = () => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách danh mục sản phẩm
+                    List of product categories
                 </div>
                 <div className="card-body">
                 
@@ -116,7 +116,7 @@ const ManageCategory = () => {
                     <FormSearch title={"tên danh mục"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchCategory} />
                     </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -124,9 +124,9 @@ const ManageCategory = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên</th>
+                                    <th>Name</th>
                                     <th>mã code</th>
-                                    <th>Thao tác</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -152,8 +152,8 @@ const ManageCategory = () => {
                             </tbody>
                         </table>
                         <ReactPaginate
-                            previousLabel={'Quay lại'}
-                            nextLabel={'Tiếp'}
+                            previousLabel={'Back'}
+                            nextLabel={'Next'}
                             breakLabel={'...'}
                             pageCount={count}
                             marginPagesDisplayed={3}

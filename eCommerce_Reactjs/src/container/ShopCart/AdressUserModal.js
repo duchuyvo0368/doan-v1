@@ -72,12 +72,12 @@ const AddressUsersModal = (props) => {
                     <div className="row">
 
                         <div className="col-6 form-group">
-                            <label>Họ và tên</label>
+                            <label>Full Name</label>
                             <input value={inputValues.shipName} name="shipName" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
                         <div className="col-6 form-group">
-                            <label>Số điện thoại</label>
+                            <label>Phone</label>
                             <input value={inputValues.shipPhoneNumber} name="shipPhoneNumber" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>

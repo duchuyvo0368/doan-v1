@@ -60,7 +60,7 @@ const Profit = (props) => {
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Thống kê</h1>
+            <h1 className="mt-4">Statistical</h1>
 
 
             <div className="card mb-4">
@@ -72,11 +72,11 @@ const Profit = (props) => {
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-2">
-                                <label htmlFor="inputZip">Loại thống kê</label>
+                                <label htmlFor="inputZip">Statistics type</label>
                                 <select value={type} name="type" onChange={(event) => settype(event.target.value)} id="inputState" className="form-control">
-                                    <option value="day">Ngày</option>
-                                    <option value="month">Tháng</option>
-                                    <option value="year">Năm</option>
+                                    <option value="day">Day</option>
+                                    <option value="month">Month</option>
+                                    <option value="year">Year</option>
                                 </select>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ const Profit = (props) => {
                             {type == "month" &&
                                 <>
                                     <div className="form-group col-md-2">
-                                        <label htmlFor="inputCity">Chọn tháng</label>
+                                        <label htmlFor="inputCity">Select month</label>
                                         <DatePicker
                                             selected={DateTime}
                                             onChange={(date) => setDateTime(date)}
@@ -119,7 +119,7 @@ const Profit = (props) => {
                             {type == "year" &&
                                 <>
                                     <div className="form-group col-md-2">
-                                        <label htmlFor="inputCity">Chọn năm</label>
+                                        <label htmlFor="inputCity">Select year</label>
                                         <DatePicker
                                             selected={DateTime}
                                             onChange={(date) => setDateTime(date)}
@@ -133,31 +133,31 @@ const Profit = (props) => {
 
 
                         </div>
-                        <button type="button" onClick={() => handleOnclick()} className="btn btn-primary">Lọc</button>
+                        <button type="button" onClick={() => handleOnclick()} className="btn btn-primary">Filter</button>
                     </form>
                 </div>
                 <div className="card-body">
                     <div className='row'>
 
                         <div className='col-12 mb-2'>
-                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                         </div>
                     </div>
                     <div className="table-responsive">
                         <table className="table table-bordered" style={{ border: '1' }} width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Mã đơn</th>
-                                    <th>Ngày đặt</th>
-                                    <th>Ngày cập nhật</th>
-                                    <th>Loại ship</th>
-                                    <th>Mã voucher</th>
-                                    <th>Hình thức</th>
-                                    <th>Trạng thái</th>
-                                    <th>Tổng tiền</th>
+                                    <th>Single code</th>
+                                    <th>Booking date</th>
+                                    <th>Update date</th>
+                                    <th>Type of ship</th>
+                                    <th>Voucher code</th>
+                                    <th>Form</th>
+                                    <th>Status</th>
+                                    <th>Total amount</th>
                                     <th>Tiền nhập hàng</th>
                                     <th>Lợi nhuận</th>
-                                    <th>Thao tác</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 

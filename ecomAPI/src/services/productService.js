@@ -1235,6 +1235,10 @@ let getProductNew = (limit) => {
     }
   });
 };
+
+let getProductRecommendedSystem=(data) => {
+  return new Promise()
+}
 let getProductShopCart = (data) => {
   return new Promise(async (resolve, reject) => {
     try {

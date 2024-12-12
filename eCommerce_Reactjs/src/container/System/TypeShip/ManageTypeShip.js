@@ -114,7 +114,7 @@ const ManageTypeShip = () => {
                             <FormSearch title={"tên loại ship"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchTypeShip} />
                         </div>
                         <div className='col-8'>
-                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                            <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                         </div>
                     </div>
                     <div className="table-responsive">
@@ -122,9 +122,9 @@ const ManageTypeShip = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên loại ship</th>
+                                    <th>Name loại ship</th>
                                     <th>Giá tiền</th>
-                                    <th>Thao tác</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -153,8 +153,8 @@ const ManageTypeShip = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

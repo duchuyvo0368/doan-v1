@@ -89,19 +89,19 @@ const ManageUser = () => {
             keyword:''
         })
         if(res && res.errCode == 0){
-            await CommonUtils.exportExcel(res.data,"Danh sách người dùng","ListUser")
+            await CommonUtils.exportExcel(res.data,"List of users","ListUser")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý người dùng</h1>
+            <h1 className="mt-4">User management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách người dùng
+                    List of users
                 </div>
                 <div className="card-body">
                     <div className='row'>
@@ -109,7 +109,7 @@ const ManageUser = () => {
                     <FormSearch title={"số điện thoại"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchUser} />
                     </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                
@@ -119,12 +119,12 @@ const ManageUser = () => {
                                 <tr>
                                     <th>STT</th>
                                     <th>Email</th>
-                                    <th>Họ và tên</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Ngày sinh</th>
+                                    <th>Full Name</th>
+                                    <th>Phone</th>
+                                    <th>Day sinh</th>
                                     <th>Giới tính</th>
                                     <th>Quyền</th>
-                                    <th>Thao tác</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -159,8 +159,8 @@ const ManageUser = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

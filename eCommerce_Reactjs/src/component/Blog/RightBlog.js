@@ -32,13 +32,13 @@ function RightBlog(props) {
             {props.isPage === true && 
             <>
             <aside className="single_sidebar_widget search_widget">
-                   <FormSearch title={"tiêu đề"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBlog} />
+                   <FormSearch title={"Header"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBlog} />
                 </aside>
                 
                    <aside class="single_sidebar_widget post_category_widget">
-                   <h4 class="widget_title">Danh mục</h4>
+                   <h4 class="widget_title">Category</h4>
                    <ul class="list cat-list">
-                   <ItemCategory activeLinkId={activeLinkId} handleClickCategory={handleClickCategory} data={{value:'Tất cả',code:'',countPost:'ALL'}}/>
+                   <ItemCategory activeLinkId={activeLinkId} handleClickCategory={handleClickCategory} data={{value:'ALL',code:'',countPost:'ALL'}}/>
                       {
                        dataCategory.map((item,index) =>{
                            return(
@@ -53,7 +53,7 @@ function RightBlog(props) {
                 }
              
                 <aside className="single_sidebar_widget popular_post_widget">
-                    <h3 className="widget_title">Bài viết nổi bật</h3>
+                    <h3 className="widget_title">Featured article</h3>
                     {dataFeatureBlog && dataFeatureBlog.length > 0 &&
                     dataFeatureBlog.map((item,index) =>{
                         return(

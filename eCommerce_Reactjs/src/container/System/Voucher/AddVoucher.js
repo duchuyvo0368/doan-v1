@@ -128,14 +128,14 @@ const AddVoucher = (props) => {
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Ngày bắt đầu</label>
+                                <label htmlFor="inputEmail4">Day bắt đầu</label>
                                 <DatePicker className="form-control" onChange={handleOnChangeDatePickerFromDate}
                                     value={inputValues.fromDate}
 
                                 />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Ngày kết thúc</label>
+                                <label htmlFor="inputPassword4">Day kết thúc</label>
                                 <DatePicker className="form-control" onChange={handleOnChangeDatePickerToDate}
                                     value={inputValues.toDate}
 
@@ -159,11 +159,11 @@ const AddVoucher = (props) => {
                                 <input type="number" value={inputValues.amount} name="amount" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Mã voucher</label>
+                                <label htmlFor="inputPassword4">Voucher code</label>
                                 <input type="text" value={inputValues.codeVoucher} name="codeVoucher" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
-                        <button onClick={() => handleSaveInforVoucher()} type="button" className="btn btn-primary">Lưu thông tin</button>
+                        <button onClick={() => handleSaveInforVoucher()} type="button" className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

@@ -48,7 +48,7 @@ const ManageBrand = () => {
         event.preventDefault();
         let res = await DeleteAllCodeService(id)
         if (res && res.errCode === 0) {
-            toast.success("Xóa nhãn hàng thành công")
+            toast.success("Brand deletion successful")
             let arrData = await getListAllCodeService({
 
                 type: 'BRAND',
@@ -61,7 +61,7 @@ const ManageBrand = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa nhãn hàng thất bại")
+        } else toast.error("Delete failed brand")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -96,28 +96,28 @@ const ManageBrand = () => {
             keyword:''
         })
         if(res && res.errCode == 0){
-            await CommonUtils.exportExcel(res.data,"Danh sách nhãn hàng","ListBrand")
+            await CommonUtils.exportExcel(res.data,"List of brands","ListBrand")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý nhãn hàng</h1>
+            <h1 className="mt-4">Brand management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách nhãn hàng sản phẩm
+                    List of product brands
                 </div>
                 <div className="card-body">
                
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tên nhãn hàng"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBrand} />
+                    <FormSearch title={"brand name"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBrand} />
                     </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -125,9 +125,9 @@ const ManageBrand = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên</th>
-                                    <th>mã code</th>
-                                    <th>Thao tác</th>
+                                    <th>Name</th>
+                                    <th>Code</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -156,8 +156,8 @@ const ManageBrand = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

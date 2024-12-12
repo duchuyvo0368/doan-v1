@@ -23,6 +23,7 @@ import {
 import { Redirect } from 'react-router';
 import VerifyEmail from './container/System/Email/VerifyEmail';
 import LoginWebPage from './container/Login/LoginWebPage';
+import Register from './container/Login/Register';
 import UserHomePage from './container/User/UseHomePage';
 import CustomScrollbars from './component/input/CustomScrollbars';
 import VoucherHomePage from './container/Voucher/VoucherHomePage';
@@ -92,6 +93,11 @@ function App() {
           <Route path="/login">
             <Header />
             <LoginWebPage />
+            <Footer />
+          </Route>
+          <Route path="/register">
+            <Header />
+            <Register />
             <Footer />
           </Route>
           <Route path="/voucher">

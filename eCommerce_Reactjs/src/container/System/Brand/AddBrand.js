@@ -46,7 +46,7 @@ const AddBrand = (props) => {
                 type: 'BRAND'
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm nhãn hàng thành công")
+                toast.success("Add successful brands")
                 setInputValues({
                     ...inputValues,
                     ["value"]: '',
@@ -56,7 +56,7 @@ const AddBrand = (props) => {
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Thêm nhãn hàng thất bại")
+            else toast.error("More failed brands")
         } else {
             let res = await UpdateAllCodeService({
                 value: inputValues.value,
@@ -64,40 +64,40 @@ const AddBrand = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật nhãn hàng thành công")
+                toast.success("Brand update successful")
 
             }
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Cập nhật nhãn hàng thất bại")
+            else toast.error("Brand update failed")
         }
     }
 
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý nhãn hàng</h1>
+            <h1 className="mt-4">Brand management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới nhãn hàng' : 'Cập nhật thông tin nhãn hàng'}
+                    {isActionADD === true ? 'Add new brand' : 'Update brand information'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Tên nhãn hàng</label>
+                                <label htmlFor="inputEmail4">Brand name</label>
                                 <input type="text" value={inputValues.value} name="value" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Mã code</label>
+                                <label htmlFor="inputPassword4">Code</label>
                                 <input type="text" value={inputValues.code} name="code" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
-                        <button type="button" onClick={() => handleSaveCategory()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveCategory()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

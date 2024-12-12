@@ -125,7 +125,7 @@ const AddTypeVoucher = (props) => {
                                 <input type="number" value={inputValues.maxValue} name="maxValue" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
-                        <button type="button" onClick={() => handleSaveTypeVoucher()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveTypeVoucher()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

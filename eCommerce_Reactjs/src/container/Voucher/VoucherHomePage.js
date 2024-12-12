@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import bannerPhoto from '../../../src/resources/img/banner-voucher.jfif'
+import bannerPhoto from '../../../src/resources/img/banner-voucher.png'
 import voucherTodayPhoto from '../../../src/resources/img/voucher-today.png'
 import voucherAllPhoto from '../../../src/resources/img/voucher-all.jfif';
 import applyVoucherPhoto from '../../../src/resources/img/applyVoucher.jfif';
@@ -99,9 +99,9 @@ function VoucherHomePage(props) {
         <div className="voucher-container">
             <div className="voucher-banner">
                 <img className="photo-banner" src={bannerPhoto}></img>
-                <img src={voucherTodayPhoto}></img>
-                <img src={voucherAllPhoto}></img>
-                <img src={applyVoucherPhoto}></img>
+                {/* <img src={voucherTodayPhoto}></img> */}
+                {/* <img src={voucherAllPhoto}></img>
+                <img src={applyVoucherPhoto}></img> */}
             </div>
             <div className="voucher-list">
                 {dataVoucher && dataVoucher.length > 0 &&
@@ -116,7 +116,7 @@ function VoucherHomePage(props) {
                         }
                         let MaxValue = item.typeVoucherOfVoucherData.maxValue
                         return (
-                            <VoucherItem sendDataFromVoucherItem={sendDataFromVoucherItem} id={item.id} width="550px" height="330px" key={index} name={item.codeVoucher} widthPercent={item.usedAmount * 100 / item.amount} maxValue={MaxValue} usedAmount={Math.round((item.usedAmount * 100 / item.amount) * 10) / 10} typeVoucher={percent} />
+                            <VoucherItem sendDataFromVoucherItem={sendDataFromVoucherItem} id={item.id}  width="450px" height="200px" key={index} name={item.codeVoucher} widthPercent={item.usedAmount * 100 / item.amount} maxValue={MaxValue} usedAmount={Math.round((item.usedAmount * 100 / item.amount) * 10) / 10} typeVoucher={percent} />
                         )
                     })
                 }
@@ -125,8 +125,8 @@ function VoucherHomePage(props) {
             </div>
             <div className="box-pagination">
                 <ReactPaginate
-                    previousLabel={'Quay lại'}
-                    nextLabel={'Tiếp'}
+                    previousLabel={'Back'}
+                    nextLabel={'Next'}
                     breakLabel={'...'}
                     pageCount={count}
                     marginPagesDisplayed={3}

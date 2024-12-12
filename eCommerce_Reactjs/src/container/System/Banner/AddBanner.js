@@ -48,7 +48,7 @@ const AddBanner = (props) => {
         let data = event.target.files;
         let file = data[0];
         if (file.size > 31312281) {
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else {
             let base64 = await CommonUtils.getBase64(file);
@@ -71,7 +71,7 @@ const AddBanner = (props) => {
                 image: inputValues.image
             })
             if (res && res.errCode === 0) {
-                toast.success("Tạo mới băng rôn thành công !")
+                toast.success("New banner successfully created!")
                 setInputValues({
                     ...inputValues,
                     ["name"]: '',
@@ -90,7 +90,7 @@ const AddBanner = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật băng rôn thành công !")
+                toast.success("Banner update successful !")
             } else {
                 toast.error(res.errMessage)
             }
@@ -98,35 +98,35 @@ const AddBanner = (props) => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý băng rôn</h1>
+            <h1 className="mt-4">Banner management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {inputValues.isActionADD === true ? 'Thêm mới băng rôn' : 'Cập nhật thông tin băng rôn'}
+                    {inputValues.isActionADD === true ? 'Add new banners' : 'Update banner information'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Tên băng rôn</label>
+                                <label htmlFor="inputEmail4">Banner name</label>
                                 <input type="text" value={inputValues.name} name="name" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="col-md-4 form-group">
-                                <label>Chọn hình ảnh</label>
+                                <label>Select image</label>
                                 <input accept=".jpg,.png" onChange={(event) => handleOnChangeImage(event)} type="file" className="form-control form-file" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Hình ảnh hiển thị</label>
+                                <label htmlFor="inputEmail4">Image displayed</label>
                                 <div style={{ backgroundImage: `url(${inputValues.imageReview})` }} onClick={() => openPreviewImage()} className="box-img-preview"></div>
                             </div>
                             <div className="form-group col-md-12">
-                                <label htmlFor="inputAddress">Mô tả chi tiết</label>
+                                <label htmlFor="inputAddress">Detailed description</label>
                                 <textarea rows="4" value={inputValues.description} name="description" onChange={(event) => handleOnChange(event)} className="form-control"></textarea>
                             </div>
                         </div>
-                        <button onClick={() => handleSaveBanner()} type="button" className="btn btn-primary">Lưu thông tin</button>
+                        <button onClick={() => handleSaveBanner()} type="button" className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

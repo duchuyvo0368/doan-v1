@@ -105,7 +105,7 @@ const Home = () => {
     datasets: [
 
       {
-        label: 'Doanh thu',
+        label: 'Revenue',
         data: StatisticOrderByMonth.arrayMonthValue,
         borderColor: 'rgb(53, 162, 235)',
         backgroundColor: 'rgba(53, 162, 235, 0.5)',
@@ -116,7 +116,7 @@ const Home = () => {
     labels: StatisticOrderByDay.arrayDayLable,
     datasets: [
       {
-        label: 'Doanh thu',
+        label: 'Revenue',
         data: StatisticOrderByDay.arrayDayValue,
         backgroundColor: 'rgba(255, 99, 132, 0.5)',
       },
@@ -171,43 +171,43 @@ const Home = () => {
   }
   return (
     <div className="container-fluid px-4">
-      <h1 className="mt-4">THỐNG KÊ</h1>
+      <h1 className="mt-4">STATISTICAL</h1>
       <ol className="breadcrumb mb-4">
-        <li className="breadcrumb-item active">Trang thống kê</li>
+        <li className="breadcrumb-item active">Statistics page</li>
       </ol>
       <div className="row">
         <div className="col-xl-3 col-md-6">
           <div className="card bg-primary text-white mb-4">
-            <div className="card-body">TỔNG SỐ ĐƠN HÀNG ({CountCard.countOrder})</div>
+            <div className="card-body">TOTAL ORDERS ({CountCard.countOrder})</div>
             <div className="card-footer d-flex align-items-center justify-content-between">
-              <Link className="small text-white stretched-link" to={'/admin/list-order'}>Chi tiết</Link>
+              <Link className="small text-white stretched-link" to={'/admin/list-order'}>Detail</Link>
               <div className="small text-white"><i className="fas fa-angle-right" /></div>
             </div>
           </div>
         </div>
         <div className="col-xl-3 col-md-6">
           <div className="card bg-warning text-white mb-4">
-            <div className="card-body">ĐÁNH GIÁ ({CountCard.countReview})</div>
+            <div className="card-body">EVALUATE ({CountCard.countReview})</div>
             <div className="card-footer d-flex align-items-center justify-content-between">
-              <a className="small text-white stretched-link" href="#">Chi tiết</a>
+              <a className="small text-white stretched-link" href="#">Detail</a>
               <div className="small text-white"><i className="fas fa-angle-right" /></div>
             </div>
           </div>
         </div>
         <div className="col-xl-3 col-md-6">
           <div className="card bg-success text-white mb-4">
-            <div className="card-body">SẢN PHẨM ({CountCard.countProduct})</div>
+            <div className="card-body">PRODUCTS ({CountCard.countProduct})</div>
             <div className="card-footer d-flex align-items-center justify-content-between">
-              <Link className="small text-white stretched-link" to={'/admin/list-product'}>Chi tiết</Link>
+              <Link className="small text-white stretched-link" to={'/admin/list-product'}>Detail</Link>
               <div className="small text-white"><i className="fas fa-angle-right" /></div>
             </div>
           </div>
         </div>
         <div className="col-xl-3 col-md-6">
           <div className="card bg-danger text-white mb-4">
-            <div className="card-body">THÀNH VIÊN ({CountCard.countUser})</div>
+            <div className="card-body">MEMBER ({CountCard.countUser})</div>
             <div className="card-footer d-flex align-items-center justify-content-between">
-              <Link className="small text-white stretched-link" to={'/admin/list-user'}>Chi tiết</Link>
+              <Link className="small text-white stretched-link" to={'/admin/list-user'}>Detail</Link>
               <div className="small text-white"><i className="fas fa-angle-right" /></div>
             </div>
           </div>
@@ -215,7 +215,7 @@ const Home = () => {
       </div>
       <div className='row'>
         <div className="col-md-8">
-          <label>Chọn năm</label>
+          <label>Select year</label>
           <DatePicker
             selected={year}
             onChange={(date) => handleOnChangeYear(date)}
@@ -223,17 +223,17 @@ const Home = () => {
             showYearPicker
             className='form-control col-md-2'
           />
-          <Line options={getOptions('Biểu đồ doanh thu theo từng tháng trong năm')} data={dataLine} />
+          <Line options={getOptions('Revenue chart by month of the year')} data={dataLine} />
         </div>
         <div className="col-md-4">
           <form>
             <div className="form-row">
               <div className="form-group col-md-8">
-                <label htmlFor="inputZip">Loại thống kê</label>
+                <label htmlFor="inputZip">Statistics type</label>
                 <select value={type} name="type" onChange={(event) => settype(event.target.value)} id="inputState" className="form-control">
-                  <option value="day">Ngày</option>
-                  <option value="month">Tháng</option>
-                  <option value="year">Năm</option>
+                  <option value="day">Day</option>
+                  <option value="month">Month</option>
+                  <option value="year">Year</option>
                 </select>
               </div>
             </div>
@@ -262,7 +262,7 @@ const Home = () => {
               {type == "month" &&
                 <>
                   <div className="form-group col-md-8">
-                    <label htmlFor="inputCity">Chọn tháng</label>
+                    <label htmlFor="inputCity">Select month</label>
                     <DatePicker
                       selected={DateTime}
                       onChange={(date) => setDateTime(date)}
@@ -276,7 +276,7 @@ const Home = () => {
               {type == "year" &&
                 <>
                   <div className="form-group col-md-8">
-                    <label htmlFor="inputCity">Chọn năm</label>
+                    <label htmlFor="inputCity">Select year</label>
                     <DatePicker
                       selected={DateTime}
                       onChange={(date) => setDateTime(date)}
@@ -290,14 +290,14 @@ const Home = () => {
 
 
             </div>
-            <button type="button" onClick={() => handleOnclick()} className="btn btn-primary">Lọc</button>
+            <button type="button" onClick={() => handleOnclick()} className="btn btn-primary">Filter</button>
           </form>
-          <Pie data={dataPie} options={getOptions('Thống kê trạng thái đơn hàng')} />;
+          <Pie data={dataPie} options={getOptions('Order status statistics')} />;
         </div>
       </div>
       <div className='row'>
         <div className='col-sm-11'>
-          <label>Chọn tháng</label>
+          <label>Select month</label>
           <DatePicker
             selected={month}
             onChange={(date) => handleOnChangeDatePickerFromDate(date)}

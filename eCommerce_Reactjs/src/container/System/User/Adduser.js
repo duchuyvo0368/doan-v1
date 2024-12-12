@@ -126,7 +126,7 @@ const Adduser = (props) => {
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý người dùng</h1>
+            <h1 className="mt-4">User management</h1>
 
 
             <div className="card mb-4">
@@ -152,23 +152,23 @@ const Adduser = (props) => {
                                 <input type="text" value={inputValues.firstName} name="firstName" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-4">
-                                <label htmlFor="inputEmail4">Tên</label>
+                                <label htmlFor="inputEmail4">Name</label>
                                 <input type="text" value={inputValues.lastName} name="lastName" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-4">
-                                <label htmlFor="inputEmail4">Số điện thoại</label>
+                                <label htmlFor="inputEmail4">Phone</label>
                                 <input type="text" value={inputValues.phoneNumber} name="phoneNumber" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="inputAddress">Địa chỉ</label>
+                            <label htmlFor="inputAddress">Address</label>
                             <input type="text" value={inputValues.address} name="address" onChange={(event) => handleOnChange(event)} className="form-control" id="inputAddress" />
                         </div>
 
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputCity">Ngày sinh</label>
+                                <label htmlFor="inputCity">Day sinh</label>
                                 <DatePicker className="form-control" onChange={handleOnChangeDatePicker}
                                     value={birthday}
 
@@ -200,7 +200,7 @@ const Adduser = (props) => {
                             </div>
                         </div>
 
-                        <button type="button" onClick={() => handleSaveUser()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveUser()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

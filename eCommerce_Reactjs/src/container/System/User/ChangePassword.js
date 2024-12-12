@@ -28,7 +28,7 @@ const ChangePassword = () => {
                 oldpassword: inputValues.oldpassword
             })
             if (res && res.errCode === 0) {
-                toast.success("Đổi mật khẩu thành công")
+                toast.success("Change password thành công")
                 setInputValues({ ...inputValues, ["newpassword"]: '', ["confirmpassword"]: '', ["oldpassword"]: '' })
             } else {
                 toast.error(res.errMessage)
@@ -38,32 +38,32 @@ const ChangePassword = () => {
     return (
         <div className="container">
             <div className="container-fluid px-4">
-                <h4 className="mt-4">Thay đổi thông tin tài khoản</h4>
+                <h4 className="mt-4">Change account information</h4>
 
 
                 <div className="card mb-4">
                     <div className="card-header">
                         <i className="fas fa-table me-1" />
-                        Đổi mật khẩu
+                        Change password
                     </div>
                     <div className="card-body">
                         <form>
                             <div className="form-group col-6">
-                                <label htmlFor="exampleInputEmail1">Mật khẩu cũ</label>
+                                <label htmlFor="exampleInputEmail1">Old password</label>
                                 <input type="password" value={inputValues.oldpassword} name="oldpassword" onChange={(event) => handleOnChange(event)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                             </div>
                             <div className="form-group col-6">
-                                <label htmlFor="exampleInputEmail1">Mật khẩu mới</label>
+                                <label htmlFor="exampleInputEmail1">New password</label>
                                 <input type="password" value={inputValues.newpassword} name="newpassword" onChange={(event) => handleOnChange(event)} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
 
                             </div>
                             <div className="form-group col-6">
-                                <label htmlFor="exampleInputPassword1">Nhập lại mật khẩu</label>
+                                <label htmlFor="exampleInputPassword1">Re-enter the password</label>
                                 <input type="password" value={inputValues.confirmpassword} name="confirmpassword" onChange={(event) => handleOnChange(event)} className="form-control" id="exampleInputPassword1" />
                             </div>
 
-                            <button onClick={() => handleSavePassword()} type="button" className="btn btn-primary ml-3">Lưu thông tin</button>
+                            <button onClick={() => handleSavePassword()} type="button" className="btn btn-primary ml-3">Save</button>
                         </form>
                     </div>
                 </div>

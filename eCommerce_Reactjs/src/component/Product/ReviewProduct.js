@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import './ReviewProduct.scss';
 import Lightbox from 'react-image-lightbox';
@@ -7,6 +8,7 @@ import { createNewReviewService, getAllReviewByProductIdService, ReplyReviewServ
 import { useParams } from 'react-router';
 import { toast } from 'react-toastify';
 import ReviewModal from './ReviewModal';
+import axios from "axios";
 function ReviewProduct(props) {
     const { id } = useParams()
     const [inputValues, setInputValues] = useState({
@@ -28,6 +30,7 @@ function ReviewProduct(props) {
     let loadAllReview = async () => {
 
         let res = await getAllReviewByProductIdService(id)
+
         if (res && res.errCode === 0) {
             let count5 = res.data.filter(item => item.star === 5)
             let count4 = res.data.filter(item => item.star === 4)
@@ -56,7 +59,7 @@ function ReviewProduct(props) {
         let data = event.target.files;
         let file = data[0];
         if(file.size > 31312281){
-            toast.error("Dung lượng file bé hơn 30mb")
+            toast.error("Smaller file size 30mb")
         }
         else{
             let base64 = await CommonUtils.getBase64(file);
@@ -71,26 +74,37 @@ function ReviewProduct(props) {
 
     };
     let handleSaveComment = async () => {
-        if (!inputValues.activeStar) toast.error("Bạn chưa chọn sao !")
-        else if (!inputValues.content) toast.error("Nội dung không được để trống !")
-        else {
-            let response = await createNewReviewService({
+        // Kiểm tra các giá trị đầu vào
+        if (!inputValues.activeStar) {
+            toast.error("Bạn chưa chọn sao!");
+            return;
+        }
+        if (!inputValues.content) {
+            toast.error("Nội dung không được để trống!");
+            return;
+        }
+
+        try {
+            // Gửi dữ liệu đánh giá lên server
+            let response = await axios.post('http://127.0.0.1:3001/add_comment', {
                 productId: id,
                 content: inputValues.content,
-                image: inputValues.image,
+                image: inputValues.image ,
                 userId: inputValues.user.id,
-                star: inputValues.activeStar
-            })
-            if (response && response.errCode === 0) {
-                toast.success("Đăng đánh giá thành công !")
+                star: inputValues.activeStar,
+            });
 
-                await loadAllReview()
-
-            } else {
-                toast.error(response.errMessage)
+            if (response.data && response.data.errCode === 0) {
+                toast.success(response.message);
+                await loadAllReview();
             }
+        } catch (error) {
+            // Bắt và xử lý lỗi kết nối
+            console.error("Error:", error.response?.data || error.message);
+            toast.error(error.response?.data?.error || "Không thể kết nối tới máy chủ!");
         }
-    }
+    };
+
     let closeModal = () => {
         setInputValues({ ...inputValues, ["isOpenModal"]: false, ["parentId"]: '' })
 
@@ -106,6 +120,7 @@ function ReviewProduct(props) {
             userId: inputValues.user.id,
             parentId: inputValues.parentId
         })
+        alert("hello"+JSON.stringify(res))
         if (res && res.errCode === 0) {
             toast.success("Phản hồi thành công !");
 

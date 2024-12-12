@@ -88,7 +88,7 @@ const AddTypeShip = (props) => {
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Tên loại ship</label>
+                                <label htmlFor="inputEmail4">Name loại ship</label>
                                 <input type="text" value={inputValues.type} name="type" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
@@ -96,7 +96,7 @@ const AddTypeShip = (props) => {
                                 <input type="text" value={inputValues.price} name="price" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
-                        <button type="button" onClick={() => handleSaveTypeShip()} className="btn btn-primary">Lưu thông tin</button>
+                        <button type="button" onClick={() => handleSaveTypeShip()} className="btn btn-primary">Save</button>
                     </form>
                 </div>
             </div>

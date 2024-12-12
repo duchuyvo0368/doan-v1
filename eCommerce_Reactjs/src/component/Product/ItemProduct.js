@@ -10,23 +10,22 @@ import "./ItemProduct.scss";
 import { saveImages } from "../../reducer/actions";
 function ItemProduct(props) {
   const dispatch = useDispatch();
-  const handleProductClick = async () => {
-    try {
-      const response = await axios.post("http://127.0.0.1:8080/predict", {
-        image: props.img,
-      });
-      //alert(props.img);
-      dispatch(saveImages(response.data));
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  
+  // const handleProductClick = async () => {
+  //   try {
+  //     const response = await axios.post("http://127.0.0.1:8080/predict", {
+  //       image: props.img,
+  //     });
+  //     //alert(props.img);
+  //     dispatch(saveImages(response.data));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
   return (
     <div
       className="product-card"
-      style={{ border: "0.1px solid hsla(210, 10%, 85%, 0.3)" }}
-      onClick={handleProductClick}
+      
     >
       <Link to={`/detail-product/${props.id}`}>
         <div className="product-img">
@@ -35,6 +34,9 @@ function ItemProduct(props) {
             <div className="p_icon">
               <a>
                 <i className="ti-eye" />
+              </a>
+              <a href="#">
+                <i class="ti-heart"></i>
               </a>
               <a>
                 <i className="ti-shopping-cart" />

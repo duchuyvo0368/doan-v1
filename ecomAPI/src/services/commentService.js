@@ -1,3 +1,4 @@
+import { raw } from "body-parser";
 import db from "../models/index";
 require('dotenv').config();
 
@@ -30,7 +31,7 @@ let createNewReview = (data) => {
 let getAllReviewByProductId = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!id) {
+            if (!id) {  
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing required parameter !'
@@ -55,8 +56,9 @@ let getAllReviewByProductId = (id) => {
                                 attributes: {
                                     exclude: ['password']
                                 },
+                                raw:true
                             })
-                        res[i].user.image = new Buffer(res[i].user.image, 'base64').toString('binary')
+                         res[i].user.image = new Buffer(res[i].user.image, 'base64').toString('binary')
                     }
                 }
 

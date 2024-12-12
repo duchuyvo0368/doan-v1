@@ -17,15 +17,15 @@ function CategoryUser(props) {
         <div className="col-md-3">
             <ul className="list-category">
                 <li className="header">Danh mục</li>
-                <li><i style={{ color: '#1e5bb8' }} className="far fa-user"></i> <Link to={`/user/detail/${props.id}`}>Tài khoản của tôi</Link>
+                <li><i style={{ color: '#1e5bb8' }} className="far fa-user"></i> <Link to={`/user/detail/${props.id}`}>My account</Link>
                     <ul>
-                        <li><Link to={`/user/detail/${props.id}`}>Hồ sơ</Link></li>
-                        <li><Link to={`/user/address/${props.id}`}>Địa chỉ</Link></li>
-                        <li><Link to={`/user/changepassword/${props.id}`}>Đổi mật khẩu</Link></li>
+                        <li><Link to={`/user/detail/${props.id}`}>Profile</Link></li>
+                        <li><Link to={`/user/address/${props.id}`}>Address</Link></li>
+                        <li><Link to={`/user/changepassword/${props.id}`}>Change password</Link></li>
                     </ul>
                 </li>
-                <li><img width="20px" height="20px" style={{ marginLeft: "-3px" }} src={orderLogo}></img> <Link to={`/user/order/${props.id}`}>Đơn mua</Link></li>
-                <li><img width="20px" height="20px" style={{ marginLeft: "-3px" }} src={storeVoucherLogo}></img> <Link to={`/user/store-voucher/${props.id}`}>Kho voucher</Link></li>
+                <li><img width="20px" height="20px" style={{ marginLeft: "-3px" }} src={orderLogo}></img> <Link to={`/user/order/${props.id}`}>Order</Link></li>
+                <li><img width="20px" height="20px" style={{ marginLeft: "-3px" }} src={storeVoucherLogo}></img> <Link to={`/user/store-voucher/${props.id}`}>Voucher</Link></li>
             </ul>
         </div>
 

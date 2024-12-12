@@ -84,13 +84,13 @@ function OrderUser(props) {
                 <div className="col-md-12">
                     <div className="box-nav-order">
                         <a className='nav-item-order active'>
-                            <span>Tất cả</span>
+                            <span>All</span>
                         </a>
 
                     </div>
                     {/* <div className='box-search-order'>
                         <i className="fas fa-search"></i>
-                        <input autoComplete='off' placeholder='Tìm kiếm theo Tên Shop, ID đơn hàng hoặc Tên Sản phẩm' type={"text"} />
+                        <input autoComplete='off' placeholder='Tìm kiếm theo Name Shop, ID đơn hàng hoặc Name Sản phẩm' type={"text"} />
                     </div> */}
                     {DataOrder && DataOrder.length > 0 &&
                         DataOrder.map((item, index) => {

@@ -105,7 +105,7 @@ const ManageSupplier = () => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý nhà cung cấp</h1>
+            <h1 className="mt-4">Supplier management</h1>
 
 
             <div className="card mb-4">
@@ -120,7 +120,7 @@ const ManageSupplier = () => {
                     <FormSearch title={"tên nhà cung cấp"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchSupplier} />
                     </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -128,11 +128,11 @@ const ManageSupplier = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên</th>
-                                    <th>Số điện thoại</th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
                                     <th>Email</th>
-                                    <th>Địa chỉ</th>
-                                    <th>Thao tác</th>
+                                    <th>Address</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -163,8 +163,8 @@ const ManageSupplier = () => {
                 </div>
             </div>
             <ReactPaginate
-                previousLabel={'Quay lại'}
-                nextLabel={'Tiếp'}
+                previousLabel={'Back'}
+                nextLabel={'Next'}
                 breakLabel={'...'}
                 pageCount={count}
                 marginPagesDisplayed={3}

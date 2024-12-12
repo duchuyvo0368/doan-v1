@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456 
+      - MYSQL_DATABASE=ecom
+    ports:
+      - 3307:3306
+ 

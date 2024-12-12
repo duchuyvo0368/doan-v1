@@ -58,7 +58,7 @@ const ManageBlog = () => {
             }
         })
         if (response && response.errCode === 0) {
-            toast.success("Xóa bài đăng thành công thành công !")
+            toast.success("Deleted post successfully !")
             let arrData = await getAllBlog({
 
                 subjectId:'',
@@ -71,7 +71,7 @@ const ManageBlog = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
         } else {
-            toast.error("Xóa bài đăng thất bại")
+            toast.error("Post deletion failed")
         }
     }
     let handleChangePage = async (number) => {
@@ -110,19 +110,19 @@ const ManageBlog = () => {
             res.data.forEach(element => {
                 element.image = ""
             })
-            await CommonUtils.exportExcel(res.data,"Danh sách bài viết","ListBlog")
+            await CommonUtils.exportExcel(res.data,"List of articles","ListBlog")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý bài đăng</h1>
+            <h1 className="mt-4">Manage posts</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách bài đăng
+                    List of posts
                 </div>
                 <div className="card-body">
               
@@ -131,7 +131,7 @@ const ManageBlog = () => {
                     <FormSearch title={"tiêu đề"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBlog} />
                     </div>
                     <div className='col-8'>
-                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Xuất excel <i class="fa-solid fa-file-excel"></i></button>
+                    <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
                     </div>
                     <div className="table-responsive">
@@ -139,10 +139,10 @@ const ManageBlog = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Tên bài đăng</th>
-                                    <th>Chủ đề</th>
-                                    <th>Hình ảnh</th>
-                                    <th>Thao tác</th>
+                                    <th>Post name</th>
+                                    <th>Topic</th>
+                                    <th>Image</th>
+                                    <th>Operation</th>
                                 </tr>
                             </thead>
 
@@ -176,8 +176,8 @@ const ManageBlog = () => {
                     </div>
                 </div>
                 <ReactPaginate
-                    previousLabel={'Quay lại'}
-                    nextLabel={'Tiếp'}
+                    previousLabel={'Back'}
+                    nextLabel={'Next'}
                     breakLabel={'...'}
                     pageCount={count}
                     marginPagesDisplayed={3}

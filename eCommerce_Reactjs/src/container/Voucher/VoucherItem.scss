@@ -1,4 +1,6 @@
 .box-voucher{
+    margin-top: 200px;
+
     color: rgb(238, 77, 45);
    
     border: 1px solid #c4c4c4;
@@ -16,8 +18,8 @@
         justify-content: center;
         margin: -29px 0 0 20px;
         img{
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             object-fit: cover;
         }
         span{
@@ -41,12 +43,12 @@
             margin: 30px 20px;
             .name-voucher{
                 color: #212121;
-                font-size: 2.25rem;
+                font-size: 1.25rem;
                
             }
             .max-value-voucher{
                 color:  #595959;
-                font-size: 1.5rem;
+                font-size: 0.9rem;
             }
             .box-percent{
                 display: flex;
@@ -54,7 +56,7 @@
                 align-items: center;
                
                 .wrap-percent{
-                    height: 0.9375rem;
+                    height: 0.4375rem;
                     border-radius: 2.5rem;
                     width: 150px;
                     background: rgba(0,0,0,.09);
@@ -68,7 +70,7 @@
                 }
                 .used-percent{
                     color: rgb(255, 66, 79);
-                    font-size: 1.55rem;
+                    font-size: 1rem;
                     margin-left: 0.5rem;
                     line-height: 1.5rem;
                 }
@@ -76,12 +78,12 @@
             .btn-voucher{
                 border:0;
                 outline: none;
-                height: 4.8125rem;
+                height: 2.8125rem;
                 border-radius: .375rem;
                 background-color: rgb(238, 77, 45);
-                font-size: 2rem;
+                font-size: 1.5rem;
                 color: #fff;
-                margin-top: 30px;
+                margin-top: 10px;
 
                 &:hover{
                     background-color: #da492c;

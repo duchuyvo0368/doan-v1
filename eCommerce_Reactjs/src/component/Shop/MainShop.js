@@ -119,18 +119,18 @@ function MainShop(props) {
             onChange={(event) => handleSelectSort(event)}
             className="sorting"
           >
-            <option value={1}>Sắp xếp</option>
-            <option value={2}>Theo giá tiền</option>
-            <option value={3}>Theo tên</option>
+            <option value={1}>Arrange</option>
+            <option value={2}>Pricer</option>
+            <option value={3}>Name</option>
           </select>
           <select
             style={{ outline: "none" }}
             onChange={(event) => handleSelectLimitPage(event)}
             className="show"
           >
-            <option value={6}>Hiển thị 6</option>
-            <option value={12}>Hiển thị 12</option>
-            <option value={18}>Hiển thị 18</option>
+            <option value={6}>Display 6</option>
+            <option value={12}>Display 12</option>
+            <option value={18}>Display 18</option>
           </select>
           <div
             style={{
@@ -140,7 +140,7 @@ function MainShop(props) {
             }}
           >
             <FormSearch
-              title={"tên tên quần áo"}
+              title={"Name name clothes"}
               handleOnchange={handleOnchangeSearch}
               handleSearch={handleSearch}
             />
@@ -153,7 +153,7 @@ function MainShop(props) {
             dataProduct.length > 0 &&
             dataProduct.map((item, index) => {
               return (
-                <div key={index} className="col-lg-3 col-md-6">
+                <div key={index} className="col-lg-4 col-md-6">
                   <div class="single-product">
                     <ItemProduct
                       id={item.id}
@@ -171,8 +171,8 @@ function MainShop(props) {
       </div>
       <div style={{ paddingTop: "30px" }}>
         <ReactPaginate
-          previousLabel={"Quay lại"}
-          nextLabel={"Tiếp"}
+          previousLabel={"Back"}
+          nextLabel={"Next"}
           breakLabel={"..."}
           pageCount={count}
           marginPagesDisplayed={3}

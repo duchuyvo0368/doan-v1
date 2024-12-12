@@ -113,7 +113,7 @@ const AddSizeModal = (props) => {
                         color="primary"
                         onClick={handleSaveInfor}
                     >
-                        Lưu thông tin
+                        Save
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>
