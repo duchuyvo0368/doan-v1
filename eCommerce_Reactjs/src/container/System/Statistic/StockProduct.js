@@ -66,19 +66,19 @@ const StockProduct = () => {
 
         })
         if (res && res.errCode == 0) {
-            await CommonUtils.exportExcel(res.data, "Product list tồn kho", "ListOrder")
+            await CommonUtils.exportExcel(res.data, "Inventory product list", "ListOrder")
         }
 
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Product management tồn kho</h1>
+            <h1 className="mt-4">Inventory product management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Product list tồn kho
+                    Product list in stock
                 </div>
 
                 <div className="card-body">
@@ -95,9 +95,9 @@ const StockProduct = () => {
                                     <th>STT</th>
                                     <th>Product Name</th>
                                     <th>Category</th>
-                                    <th>nhãn hàng</th>
-                                    <th>Chất liệu</th>
-                                    <th>Số lượng tồn</th>
+                                    <th>Brand</th>
+                                    <th>Material</th>
+                                    <th>Stock quantity</th>
                                 </tr>
                             </thead>
 

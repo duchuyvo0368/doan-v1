@@ -71,22 +71,22 @@ const ManageOrder = () => {
             statusId: 'ALL'
         })
         if (res && res.errCode == 0) {
-            await CommonUtils.exportExcel(res.data, "Danh sách đơn hàng", "ListOrder")
+            await CommonUtils.exportExcel(res.data, "Order List", "ListOrder")
         }
 
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý đơn đặt hàng</h1>
+            <h1 className="mt-4">Order Management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách đơn đặt hàng
+                    Order List
                 </div>
                 <select onChange={(event) => handleOnchangeStatus(event)} class="form-select col-3 ml-3 mt-3">
-                    <option value={'ALL'} selected>Trạng thái đơn hàng</option>
+                    <option value={'ALL'} selected>Order Status</option>
                     {
                         dataStatusOrder && dataStatusOrder.length > 0 &&
                         dataStatusOrder.map((item, index) => {
@@ -110,7 +110,7 @@ const ManageOrder = () => {
                                     <th>Single code</th>
                                     <th>SDT</th>
                                     <th>Email</th>
-                                    <th>Booking date</th>
+                                    <th>Order Date</th>
                                     <th>Type of ship</th>
                                     <th>Voucher code</th>
                                     <th>Form</th>
@@ -132,11 +132,11 @@ const ManageOrder = () => {
                                                 <td>{moment.utc(item.createdAt).local().format('DD/MM/YYYY HH:mm:ss')}</td>
                                                 <td>{item.typeShipData.type}</td>
                                                 <td>{item.voucherData.codeVoucher}</td>
-                                                <td>{item.isPaymentOnline == 0 ? 'Thanh toán tiền mặt' : 'Thanh toán online'}</td>
+                                                <td>{item.isPaymentOnline == 0 ? 'Cash Payment' : 'Online Payment'}</td>
                                                 <td>{item.statusOrderData.value}</td>
                                                 <td>{item.shipperData && item.shipperData.firstName + " " + item.shipperData.lastName + " - " + item.shipperData.phoneNumber}</td>
                                                 <td>
-                                                    <Link to={`/admin/order-detail/${item.id}`}>Xem chi tiết</Link>
+                                                    <Link to={`/admin/order-detail/${item.id}`}>View Details</Link>
 
 
                                                 </td>

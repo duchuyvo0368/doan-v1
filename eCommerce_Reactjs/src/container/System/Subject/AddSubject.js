@@ -46,7 +46,7 @@ const AddSubject = (props) => {
                 type: 'SUBJECT'
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm chủ đề thành công")
+                toast.success("Topic added successfully")
                 setInputValues({
                     ...inputValues,
                     ["value"]: '',
@@ -56,7 +56,7 @@ const AddSubject = (props) => {
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Thêm chủ đề thất bại")
+            else toast.error("Failed to add topic")
         } else {
             let res = await UpdateAllCodeService({
                 value: inputValues.value,
@@ -64,32 +64,32 @@ const AddSubject = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật chủ đề thành công")
+                toast.success("Topic updated successfully")
 
             }
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Cập nhật chủ đề thất bại")
+            else toast.error("Failed to update topic")
         }
     }
 
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý chủ đề</h1>
+            <h1 className="mt-4">Topics management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới chủ đề' : 'Cập nhật thông tin chủ đề'}
+                    {isActionADD === true ? 'Add new topic' : 'Update topic information'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Name chủ đề</label>
+                                <label htmlFor="inputEmail4">Topic name</label>
                                 <input type="text" value={inputValues.value} name="value" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">

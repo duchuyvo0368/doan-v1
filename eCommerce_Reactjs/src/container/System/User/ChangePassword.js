@@ -16,10 +16,10 @@ const ChangePassword = () => {
     };
     let handleSavePassword = async () => {
         if (!inputValues.newpassword || !inputValues.confirmpassword || !inputValues.oldpassword) {
-            toast.error("Không được để thông tin trống")
+            toast.error("Information cannot be empty")
         }
         else if (inputValues.newpassword !== inputValues.confirmpassword) {
-            toast.error("Mật khẩu nhập lại không trùng khớp !")
+            toast.error("The passwords do not match. !")
         }
         else {
             let res = await handleChangePassword({
@@ -28,7 +28,7 @@ const ChangePassword = () => {
                 oldpassword: inputValues.oldpassword
             })
             if (res && res.errCode === 0) {
-                toast.success("Change password thành công")
+                toast.success("Password changed successfully")
                 setInputValues({ ...inputValues, ["newpassword"]: '', ["confirmpassword"]: '', ["oldpassword"]: '' })
             } else {
                 toast.error(res.errMessage)

@@ -33,8 +33,8 @@ const VerifyEmail = () => {
     return (
         <div className="container-verify-email">
             <h3 className="text-verify-email">
-                {status === true && "Xác thực email thành công !"}
-                {status === false && "Email đã được xác thực hoặc không tồn tại !"}
+                {status === true && "Email verified successfully !"}
+                {status === false && "Email has been verified or does not exist !"}
             </h3>
         </div>
     )

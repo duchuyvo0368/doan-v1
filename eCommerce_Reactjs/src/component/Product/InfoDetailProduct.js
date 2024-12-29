@@ -133,10 +133,10 @@ function InfoDetailProduct(props) {
                     <ul className="list">
                         <li>
                             <a className="active" href="#">
-                                <span>Loại</span> : {dataProduct && dataProduct.categoryData ? dataProduct.categoryData.value : ''}</a>
+                                <span>Type</span> : {dataProduct && dataProduct.categoryData ? dataProduct.categoryData.value : ''}</a>
                         </li>
                         <li>
-                            <a href="#"> <span>Trạng thái</span> : {quantity > 0 ? 'Còn hàng' : 'Hết hàng'}</a>
+                            <a href="#"> <span>Status</span> : {quantity > 0 ? 'In Stock' : 'Out of Stock'}</a>
                         </li>
                         <li>
                             <div className="box-size">
@@ -158,7 +158,7 @@ function InfoDetailProduct(props) {
                             </div>
                         </li>
                         <li>
-                            <a href="#">{quantity} sản phẩm có sẵn</a>
+                            <a href="#">{quantity} In Stock</a>
                         </li>
                     </ul>
                     <p>
@@ -166,13 +166,13 @@ function InfoDetailProduct(props) {
                     </p>
                     <div style={{ display: 'flex' }}>
                         <div className="product_count">
-                            <label htmlFor="qty">Số lượng</label>
+                            <label htmlFor="qty">Quantity</label>
                             {/* <input type="text" name="qty" id="sst" maxLength={12} defaultValue={1} title="Quantity:" className="input-text qty" /> */}
                             <input type="number" value={quantityProduct} onChange={(event) => setquantityProduct(event.target.value)} min="1" />
 
                         </div>
                         <div className="form-group">
-                            <label style={{ fontSize: '14px', color: '#797979', fontFamily: '"Roboto",sans-serif', marginLeft: '16px' }} htmlFor="type">Loại sản phẩm</label>
+                            <label style={{ fontSize: '14px', color: '#797979', fontFamily: '"Roboto",sans-serif', marginLeft: '16px' }} htmlFor="type">Type of Product</label>
                             <select onChange={(event) => handleSelectDetail(event)} className="sorting" name="type" style={{ outline: 'none', border: '1px solid #eee', marginLeft: '16px' }}>
                                 {dataProduct && productDetail && productDetail.length > 0 &&
                                     productDetail.map((item, index) => {
@@ -189,7 +189,7 @@ function InfoDetailProduct(props) {
 
 
                     <div className="card_area">
-                        <a className="main_btn" onClick={() => handleAddShopCart()}>Thêm vào giỏ</a>
+                        <a className="main_btn" onClick={() => handleAddShopCart()}> Add to cart</a>
                         <a className="icon_btn" href="#">
                             <i className="lnr lnr lnr-heart" />
                         </a>

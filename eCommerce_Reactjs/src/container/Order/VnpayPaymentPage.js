@@ -56,7 +56,7 @@ function VnpayPaymentPage(props) {
                     <NavLink to="/" className="navbar-brand logo_h">
                         <img src="/resources/img/logo.png" alt="" />
                     </NavLink>
-                    <span>Thanh Toán VNPAY</span>
+                    <span>VNPAY Payment</span>
                 </div>
                
                 <div className="wrap-order-item">
@@ -66,53 +66,53 @@ function VnpayPaymentPage(props) {
                             <div className="col-md-12">
                     <div className="p-3 py-5">
                         <div className="d-flex justify-content-between align-items-center mb-3">
-                            <h4 className="text-right">Thông tin thanh toán</h4>
+                            <h4 className="text-right">Payment information</h4>
                         </div>
                         <div className="row mt-2">
-                            <div className="col-md-12"><label className="labels">Loại hàng hóa</label><select value={inputValues.orderType} onChange={(event) => handleOnChange(event)} name="orderType"  id="inputState" className="form-control">
+                            <div className="col-md-12"><label className="labels">Type of goods</label><select value={inputValues.orderType} onChange={(event) => handleOnChange(event)} name="orderType"  id="inputState" className="form-control">
                                 
-                                <option value='billpayment'>Thanh toán hóa đơn</option>
+                                <option value='billpayment'>Pay bills</option>
                                 </select></div>
                         </div>
                         <div className="row mt-2">
-                            <div className="col-md-12"><label className="labels">Số tiền</label><input name="amount" disabled={true} value={inputValues.amount} onChange={(event) => handleOnChange(event)}  type="text" className="form-control" /></div>
+                            <div className="col-md-12"><label className="labels">Amount</label><input name="amount" disabled={true} value={inputValues.amount} onChange={(event) => handleOnChange(event)}  type="text" className="form-control" /></div>
                         </div>
                         <div className="row mt-2">
-                            <div className="col-md-12"><label className="labels">Nội dung thanh toán</label><input value={inputValues.orderDescription} onChange={(event) => handleOnChange(event)} name="orderDescription"   type="text" className="form-control" /></div>
+                            <div className="col-md-12"><label className="labels">Payment content</label><input value={inputValues.orderDescription} onChange={(event) => handleOnChange(event)} name="orderDescription"   type="text" className="form-control" /></div>
                         </div>
                         <div className="row mt-2">
-                            <div className="col-md-12"><label className="labels">Ngân hàng</label><select value={inputValues.bankCode}  onChange={(event) => handleOnChange(event)} name="bankCode"  id="inputState" className="form-control">
+                            <div className="col-md-12"><label className="labels">Bank</label><select value={inputValues.bankCode}  onChange={(event) => handleOnChange(event)} name="bankCode"  id="inputState" className="form-control">
                                 
-                            <option value=''>  Không chọn </option>
-                            <option value='VNPAYQR'>  Ngân hàng VNPAYQR</option>
-                            <option value='NCB'>  Ngân hàng NCB</option>
-                            <option value='SCB'>  Ngân hàng SCB</option>
-                            <option value='SACOMBANK'>  Ngân hàng SACOMBANK</option>
-                            <option value='EXIMBANK'>  Ngân hàng EXIMBANK</option>
-                            <option value='MSBANK'>  Ngân hàng MSBANK</option>
-                            <option value='NAMABANK'>  Ngân hàng NAMABANK</option>
-                            <option value='VISA'>  Ngân hàng VISA</option>
-                            <option value='VNMART'>  Ngân hàng VNMART</option>
-                            <option value='VIETINBANK'>  Ngân hàng VIETINBANK</option>
-                            <option value='VIETCOMBANK'>  Ngân hàng VIETCOMBANK</option>
-                            <option value='HDBANK'>  Ngân hàng HDBANK</option>
-                            <option value='DONGABANK'>  Ngân hàng Dong A</option>
-                            <option value='TPBANK'>  Ngân hàng Tp Bank</option>
-                            <option value='OJB'>  Ngân hàng OceanBank</option>
-                            <option value='BIDV'>  Ngân hàng BIDV</option>
-                            <option value='TECHCOMBANK'>  Ngân hàng Techcombank</option>
-                            <option value='VPBANK'>  Ngân hàng VPBank</option>
-                            <option value='AGRIBANK'>  Ngân hàng AGRIBANK</option>
-                            <option value='MBBANK'>  Ngân hàng MBBank</option>
-                            <option value='ACB'>  Ngân hàng ACB</option>
-                            <option value='OCB'>  Ngân hàng OCB</option>
-                            <option value='SHB'>  Ngân hàng SHB</option>
-                            <option value='IVB'>  Ngân hàng IVB</option>
+                            <option value=''>  Do not select </option>
+                            <option value='VNPAYQR'>  VNPAYQR Bank</option>
+                            <option value='NCB'>  NCB Bank</option>
+                            <option value='SCB'>  SCB Bank</option>
+                            <option value='SACOMBANK'>  SACOMBANK Bank</option>
+                            <option value='EXIMBANK'>  EXIMBANK Bank</option>
+                            <option value='MSBANK'>  MBBANK Bank</option>
+                            <option value='NAMABANK'>  NAMABANK Bank</option>
+                            <option value='VISA'>  VISA Bank</option>
+                            <option value='VNMART'>  VNMART Bank</option>
+                            <option value='VIETINBANK'>  VIETINBANK Bank</option>
+                            <option value='VIETCOMBANK'>  VIETCOMBANK Bank</option>
+                            <option value='HDBANK'>  HDBANK Bank</option>
+                            <option value='DONGABANK'>  Dong A Bank</option>
+                            <option value='TPBANK'>  Tpbank</option>
+                            <option value='OJB'>  OceanBank</option>
+                            <option value='BIDV'>  BIDV Bank</option>
+                            <option value='TECHCOMBANK'>  Techcombank</option>
+                            <option value='VPBANK'>  VPBank</option>
+                            <option value='AGRIBANK'>  AGRIBANK</option>
+                            <option value='MBBANK'>  MBBank</option>
+                            <option value='ACB'>  ACB</option>
+                            <option value='OCB'>  OCB</option>
+                            <option value='SHB'>  SHB</option>
+                            <option value='IVB'>  IVB</option>
                                 
                             </select></div>
                         </div>
                         <div className="row mt-2">
-                            <div className="col-md-12"><label className="labels">Ngôn ngữ</label><select value={inputValues.language} onChange={(event) => handleOnChange(event)} name="language"  id="inputState" className="form-control">
+                            <div className="col-md-12"><label className="labels">Language</label><select value={inputValues.language} onChange={(event) => handleOnChange(event)} name="language"  id="inputState" className="form-control">
                                 
                                 <option value='vn'>Tiếng Việt</option>
                                 <option value='en'>English</option>
@@ -121,7 +121,7 @@ function VnpayPaymentPage(props) {
                                 </select></div>
                         </div>
                        
-                        <div  className="mt-3"><button onClick={() => handleOnclick()} className="btn btn-primary profile-button" type="button">Thanh Toán</button></div>
+                        <div  className="mt-3"><button onClick={() => handleOnclick()} className="btn btn-primary profile-button" type="button">Pay</button></div>
                     </div>
                 </div>
                             </div>

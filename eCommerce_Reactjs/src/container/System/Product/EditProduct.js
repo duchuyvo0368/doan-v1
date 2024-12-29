@@ -59,7 +59,7 @@ const EditProduct = (props) => {
             id: id
         })
         if (res && res.errCode === 0) {
-            toast.success("Cập nhật sản phẩm thành công !")
+            toast.success("Product updated successfully !")
         } else {
             toast.error(res.errMessage)
         }
@@ -79,7 +79,7 @@ const EditProduct = (props) => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Cập nhật sản phẩm
+                    Update product
                 </div>
                 <div className="card-body">
                     <form>
@@ -89,16 +89,16 @@ const EditProduct = (props) => {
                                 <input type="text" value={inputValues.name} name="name" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Chất liệu</label>
+                                <label htmlFor="inputPassword4">Material</label>
                                 <input type="text" value={inputValues.material} name="material" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Được làm bởi</label>
+                                <label htmlFor="inputPassword4">Made</label>
                                 <input type="text" value={inputValues.madeby} name="madeby" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="inputAddress">Mô tả sản phẩm</label>
+                            <label htmlFor="inputAddress">Product description</label>
                             <MdEditor
                                 style={{ height: '400px' }}
                                 renderHTML={text => mdParser.render(text)}
@@ -108,7 +108,7 @@ const EditProduct = (props) => {
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Category sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product category</label>
                                 <select value={inputValues.categoryId} name="categoryId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataCategory && dataCategory.length > 0 &&
                                         dataCategory.map((item, index) => {
@@ -120,7 +120,7 @@ const EditProduct = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Nhãn hàng</label>
+                                <label htmlFor="inputPassword4">Brand</label>
                                 <select value={inputValues.brandId} name="brandId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataBrand && dataBrand.length > 0 &&
                                         dataBrand.map((item, index) => {

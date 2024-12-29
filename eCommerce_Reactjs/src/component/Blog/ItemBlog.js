@@ -19,7 +19,7 @@ function ItemBlog(props) {
                 <p>{props.data.shortDescription}</p>
                 <ul className="blog-info-link">
                     <li><i className="ti-user" /> {props.data.userData.firstName+" "+props.data.userData.lastName}</li>
-                    <li><i className="ti-comments" /> {props.data.commentData.length} Bình luận</li>
+                    <li><i className="ti-comments" /> {props.data.commentData.length} Comment</li>
                 </ul>
                 </Link>
             </div>

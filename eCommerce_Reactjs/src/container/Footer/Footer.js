@@ -10,7 +10,7 @@ function Footer(props) {
               <h4>Top Products</h4>
               <ul>
                 <li><a href="#">Managed Website</a></li>
-                <li><a href="#">Manage Reputation</a></li>
+                <li><a href="#">Reputation Management</a></li>
                 <li><a href="#">Power Tools</a></li>
                 <li><a href="#">Marketing Service</a></li>
               </ul>

@@ -85,13 +85,13 @@ function VoucherHomePage(props) {
                 voucherId: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Lưu mã voucher thành công !")
+                toast.success("Saved voucher code successfully !")
                 await fetchData()
             } else {
                 toast.error(res.errMessage)
             }
         } else {
-            toast.error("Đăng nhập để lưu mã giảm giá")
+            toast.error("Login to save discount code")
         }
 
     }

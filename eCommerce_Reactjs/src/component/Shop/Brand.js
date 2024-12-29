@@ -18,7 +18,7 @@ function Brand(props) {
                     createdAt: null,
                     code: "ALL",
                     type: "BRAND",
-                    value: "Tất cả",
+                    value: "All",
                 })
                 setarrBrand(arrData.data)
             }

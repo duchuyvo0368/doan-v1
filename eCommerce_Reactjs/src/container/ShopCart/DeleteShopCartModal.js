@@ -31,7 +31,7 @@ const DeleteShopCartModal = (props) => {
                 size="md" centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Bạn chắc chắn muốn bỏ sản phẩm này?</h5>
+                    <h5 className="modal-title">You definitely want to quit this product ?</h5>
                     <button onClick={handleCloseModal} type="button" className="btn btn-time" aria-label="Close">X</button>
                 </div>
                 <ModalBody>
@@ -45,11 +45,11 @@ const DeleteShopCartModal = (props) => {
                         color="primary"
                         onClick={handleDelete}
                     >
-                        Thực hiện
+                        Perform
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>
-                        Hủy
+                      Cancel
                     </Button>
                 </ModalFooter>
             </Modal>

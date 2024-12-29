@@ -47,7 +47,7 @@ const ManageVoucher = () => {
             }
         })
         if (res && res.errCode === 0) {
-            toast.success("Xóa mã voucher thành công")
+            toast.success("Voucher code deleted successfully")
             let arrData = await getAllVoucher({
                 limit: PAGINATION.pagerow,
                 offset: numberPage * PAGINATION.pagerow
@@ -58,7 +58,7 @@ const ManageVoucher = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa mã voucher thất bại")
+        } else toast.error("Failed to delete voucher code")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -84,19 +84,19 @@ const ManageVoucher = () => {
                item.fromDate = moment.unix(item.fromDate / 1000).format('DD/MM/YYYY')
                item.toDate=  moment.unix(item.toDate / 1000).format('DD/MM/YYYY')
             })
-            await CommonUtils.exportExcel(res.data,"Danh sách voucher","ListVoucher")
+            await CommonUtils.exportExcel(res.data,"Voucher list","ListVoucher")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý mã voucher</h1>
+            <h1 className="mt-4">Voucher codes management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách mã voucher
+                    List of voucher codes
                 </div>
                 <div className="card-body">
                 <div className='row'>
@@ -111,11 +111,11 @@ const ManageVoucher = () => {
                                 <tr>
                                     <th>STT</th>
                                     <th>Voucher code</th>
-                                    <th>Loại voucher</th>
-                                    <th>Số lượng</th>
-                                    <th>Đã sử dụng</th>
-                                    <th>Day bắt đầu</th>
-                                    <th>Day kết thúc</th>
+                                    <th>Voucher type</th>
+                                    <th>Quantity</th>
+                                    <th>Used</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

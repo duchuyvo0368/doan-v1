@@ -50,7 +50,7 @@ const ManageProduct = () => {
             id: id
         })
         if (data && data.errCode === 0) {
-            toast.success("Ẩn sản phẩm thành công!")
+            toast.success("Product hidden successfully!")
             let arrData = await getAllProductAdmin({
 
                 sortName: '',
@@ -67,7 +67,7 @@ const ManageProduct = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
         } else {
-            toast.error("Ẩn sản phẩm thất bại!")
+            toast.error("Failed to hide product!")
         }
     }
     let handleActiveProduct = async (id) => {
@@ -76,10 +76,10 @@ const ManageProduct = () => {
             id: id
         })
         if (data && data.errCode === 0) {
-            toast.success("Hiện sản phẩm thành công!")
+            toast.success("Product displayed successfully!")
             loadProduct('');
         } else {
-            toast.error("Hiện sản phẩm thất bại!")
+            toast.error("Failed to display product!")
         }
     }
     let handleChangePage = async (number) => {
@@ -142,7 +142,7 @@ const ManageProduct = () => {
                   
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tên sản phẩm"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchProduct} />                    </div>
+                    <FormSearch title={"Product name"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchProduct} />                    </div>
                     <div className='col-8'>
                     <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
                     </div>
@@ -154,10 +154,10 @@ const ManageProduct = () => {
                                     <th>STT</th>
                                     <th>Product Name</th>
                                     <th>Category</th>
-                                    <th>Nhãn hàng</th>
-                                    <th>Chất liệu</th>
-                                    <th>Được làm bởi</th>
-                                    <th>Lượt xem</th>
+                                    <th>Brand</th>
+                                    <th>Material</th>
+                                    <th>Made</th>
+                                    <th>Views</th>
                                     <th>Status</th>
                                     <th>Operation</th>
                                 </tr>

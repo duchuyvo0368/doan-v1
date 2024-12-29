@@ -89,22 +89,22 @@ const AddImageModal = (props) => {
                 size="md" centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Thêm hình ảnh chi tiết sản phẩm</h5>
+                    <h5 className="modal-title">Add product detail images</h5>
                     <button onClick={handleCloseModal} type="button" className="btn btn-time" aria-label="Close">X</button>
                 </div>
                 <ModalBody>
                     <div className="row">
                         <div className="col-12 form-group">
-                            <label>Name hình ảnh</label>
+                            <label>Image name</label>
                             <input value={inputValues.caption} name="caption" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
                         <div className="col-12 form-group">
-                            <label>Ảnh hiển thị</label>
+                            <label>Image name"</label>
                             <div style={{ backgroundImage: `url(${inputValues.imageReview})` }} onClick={() => openPreviewImage()} className="img-review"></div>
                         </div>
                         <div className="col-12 form-group">
-                            <label>Chọn hình ảnh</label>
+                            <label>Select image</label>
                             <input onChange={(event) => handleOnChangeImage(event)} type="file" accept=".jpg,.png" className="form-control form-file" />
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const AddImageModal = (props) => {
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>
-                        Hủy
+                        Cancel
                     </Button>
                 </ModalFooter>
             </Modal>

@@ -94,7 +94,7 @@ const VoucherModal = (props) => {
                    size="md" centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Chọn Eiser Voucher</h5>
+                    <h5 className="modal-title">Choose Voucher</h5>
                     <button onClick={handleCloseModal} type="button" className="btn btn-time" aria-label="Close">X
                     </button>
                 </div>
@@ -134,7 +134,7 @@ const VoucherModal = (props) => {
 
                     {' '}
                     <Button onClick={handleCloseModal}>
-                        Hủy
+                    Cancel
                     </Button>
                 </ModalFooter>
             </Modal>

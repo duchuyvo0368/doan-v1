@@ -73,7 +73,7 @@ const Information = () => {
             image: inputValues.image
         })
         if (res && res.errCode === 0) {
-            toast.success("Cập nhật người dùng thành công")
+            toast.success("User updated successfully")
 
         } else {
             toast.error(res.errMessage)
@@ -84,7 +84,7 @@ const Information = () => {
             id: id
         })
         if (res && res.errCode === 0) {
-            toast.success("Vui lòng kiểm tra email !")
+            toast.success("Please check your email !")
         } else {
             toast.error(res.errMessage)
         }

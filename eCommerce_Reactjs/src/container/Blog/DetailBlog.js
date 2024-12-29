@@ -68,13 +68,13 @@ function DetailBlog(props) {
         userId: user.id,
       })
       if (res && res.errCode == 0) {
-        toast.success('Đăng bình luận thành công')
+        toast.success('Comment posted successfully')
         loadComment(id)
       } else {
         toast.error(res.errMessage)
       }
     } else {
-      toast.error("Hãy đăng nhập để bình luận")
+      toast.error("Please login to comment")
     }
   }
   return (
@@ -84,12 +84,12 @@ function DetailBlog(props) {
           <div class="container">
             <div class="banner_content d-md-flex justify-content-between align-items-center">
               <div class="mb-3 mb-md-0">
-                <h2>Chi tiết bài đăng</h2>
-                <p>Theo dõi bài đăng để nhận thông tin mới nhất</p>
+                <h2>Post details</h2>
+                <p>Follow the post to get the latest information</p>
               </div>
               <div class="page_link">
-                <Link to={"/"}>Trang chủ</Link>
-                <Link to={"/blog"}>Tin tức</Link>
+                <Link to={"/"}>Home</Link>
+                <Link to={"/blog"}>News</Link>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ function DetailBlog(props) {
               </div>
 
               <div className="comments-area">
-                <h4>{dataComment.length} Bình luận</h4>
+                <h4>{dataComment.length} Comment</h4>
                 {dataComment && dataComment.length > 0 &&
                   dataComment.map((item, index) => {
                     if (item.user) {

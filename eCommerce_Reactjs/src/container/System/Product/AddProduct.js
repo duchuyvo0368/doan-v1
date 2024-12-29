@@ -77,7 +77,7 @@ const AddProduct = (props) => {
             weight: inputValues.weight
         })
         if (res && res.errCode === 0) {
-            toast.success("Tạo mới sản phẩm thành công!")
+            toast.success("Create new products successfully!")
             setInputValues({
                 ...inputValues,
                 ["name"]: '',
@@ -118,7 +118,7 @@ const AddProduct = (props) => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Thêm mới sản phẩm
+                    Add New Product
                 </div>
                 <div className="card-body">
                     <form>
@@ -128,17 +128,17 @@ const AddProduct = (props) => {
                                 <input type="text" value={inputValues.name} name="name" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Chất liệu</label>
+                                <label htmlFor="inputPassword4">Material</label>
                                 <input type="text" value={inputValues.material} name="material" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Được làm bởi</label>
+                                <label htmlFor="inputPassword4">Made by</label>
                                 <input type="text" value={inputValues.madeby} name="madeby" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Category sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product category</label>
                                 <select value={inputValues.categoryId} name="categoryId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataCategory && dataCategory.length > 0 &&
                                         dataCategory.map((item, index) => {
@@ -150,7 +150,7 @@ const AddProduct = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Nhãn hàng</label>
+                                <label htmlFor="inputPassword4">Brand</label>
                                 <select value={inputValues.brandId} name="brandId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataBrand && dataBrand.length > 0 &&
                                         dataBrand.map((item, index) => {
@@ -164,7 +164,7 @@ const AddProduct = (props) => {
 
                         </div>
                         <div className="form-group">
-                            <label htmlFor="inputAddress">Mô tả sản phẩm</label>
+                            <label htmlFor="inputAddress">Product description</label>
                             <MdEditor
                                 style={{ height: '400px' }}
                                 renderHTML={text => mdParser.render(text)}
@@ -175,40 +175,40 @@ const AddProduct = (props) => {
 
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Name loại sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product type name</label>
                                 <input type="text" value={inputValues.nameDetail} name="nameDetail" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Chiều rộng</label>
+                                <label htmlFor="inputEmail4">Width</label>
                                 <input type="text" value={inputValues.width} name="width" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">chiều dài</label>
+                                <label htmlFor="inputPassword4">Height</label>
                                 <input type="text" value={inputValues.height} name="height" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Giá gốc</label>
+                                <label htmlFor="inputEmail4">Original price</label>
                                 <input type="number" value={inputValues.originalPrice} name="originalPrice" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Giá khuyến mãi</label>
+                                <label htmlFor="inputPassword4">Promotional price</label>
                                 <input type="number" value={inputValues.discountPrice} name="discountPrice" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Khối lượng</label>
+                                <label htmlFor="inputEmail4">Volume</label>
                                 <input type="text" value={inputValues.weight} name="weight" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                            
                            
                         </div>
                         <div className="form-group">
-                            <label htmlFor="inputAddress">Mô tả chi tiết</label>
+                            <label htmlFor="inputAddress">Detailed description</label>
                             <textarea rows="4" value={inputValues.description} name="description" onChange={(event) => handleOnChange(event)} className="form-control"></textarea>
                         </div>
                         <div className="form-row">
                             
                         <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Kích thước</label>
+                                <label htmlFor="inputEmail4">Size</label>
                                 <select value={inputValues.sizeId} name="sizeId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataSize && dataSize.length > 0 &&
                                         dataSize.map((item, index) => {
@@ -220,14 +220,14 @@ const AddProduct = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Chọn hình ảnh</label>
+                                <label htmlFor="inputPassword4">Select image</label>
                                 <input type="file" id="previewImg" accept=".jpg,.png"
                                     hidden onChange={(event) => handleOnChangeImage(event)}
                                 />
                                 <br></br>
                                 <label style={{ backgroundColor: '#eee', borderRadius: '5px', padding: '6px', cursor: 'pointer' }} className="label-upload" htmlFor="previewImg"
 
-                                >Tải ảnh <i className="fas fa-upload"></i></label>
+                                >Upload image <i className="fas fa-upload"></i></label>
                                 <div style={{ backgroundImage: `url(${inputValues.imageReview})` }} onClick={() => openPreviewImage()} className="box-image"></div>
                             </div>
                         </div>

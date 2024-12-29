@@ -122,7 +122,7 @@ function ReviewProduct(props) {
         })
         alert("hello"+JSON.stringify(res))
         if (res && res.errCode === 0) {
-            toast.success("Phản hồi thành công !");
+            toast.success("Response successful !");
 
             await loadAllReview()
         }
@@ -134,7 +134,7 @@ function ReviewProduct(props) {
             }
         })
         if (res && res.errCode === 0) {
-            toast.success("Xóa phản hồi thành công !")
+            toast.success("Response deleted successfully !")
             await loadAllReview()
         } else {
             toast.error(res.errMessage)
@@ -148,12 +148,12 @@ function ReviewProduct(props) {
                         <div className="box_total">
                             <h5>Sao trung bình</h5>
                             <h4>{inputValues.countStar.average ? Math.round(inputValues.countStar.average * 10) / 10 : 0}</h4>
-                            <h6>({inputValues.countStar.quantity} lượt đánh giá)</h6>
+                            <h6>({inputValues.countStar.quantity} reviews)</h6>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="rating_list">
-                            <h3>{inputValues.countStar.quantity} lượt đánh giá</h3>
+                            <h3>{inputValues.countStar.quantity}reviews</h3>
                             <ul className="list">
                                 <li>
                                     <a href="#">5
@@ -161,7 +161,7 @@ function ReviewProduct(props) {
                                         <i className="fa fa-star" />
                                         <i className="fa fa-star" />
                                         <i className="fa fa-star" />
-                                        <i className="fa fa-star" /> Có {inputValues.countStar.star5} lượt đánh giá</a>
+                                        <i className="fa fa-star" /> Có {inputValues.countStar.star5} reviews</a>
                                 </li>
                                 <li>
                                     <a href="#">4
@@ -169,25 +169,25 @@ function ReviewProduct(props) {
                                         <i className="fa fa-star" />
                                         <i className="fa fa-star" />
 
-                                        <i className="fa fa-star" /> Có {inputValues.countStar.star4} lượt đánh giá</a>
+                                        <i className="fa fa-star" /> Có {inputValues.countStar.star4} reviews</a>
                                 </li>
                                 <li>
                                     <a href="#">3
                                         <i className="fa fa-star" />
                                         <i className="fa fa-star" />
 
-                                        <i className="fa fa-star" /> Có {inputValues.countStar.star3} lượt đánh giá</a>
+                                        <i className="fa fa-star" /> Có {inputValues.countStar.star3} reviews</a>
                                 </li>
                                 <li>
                                     <a href="#">2
                                         <i className="fa fa-star" />
 
-                                        <i className="fa fa-star" /> Có {inputValues.countStar.star2} lượt đánh giá</a>
+                                        <i className="fa fa-star" /> Có {inputValues.countStar.star2} reviews</a>
                                 </li>
                                 <li>
                                     <a href="#">1
 
-                                        <i className="fa fa-star" /> Có {inputValues.countStar.star1} lượt đánh giá</a>
+                                        <i className="fa fa-star" /> Có {inputValues.countStar.star1} reviews</a>
                                 </li>
                             </ul>
                         </div>
@@ -197,7 +197,7 @@ function ReviewProduct(props) {
                     {inputValues.user &&
                         <div className="review_item">
                             <div className="form-group">
-                                <label style={{ color: '#333', fontSize: '16px', fontWeight: '600' }}>Viết đánh giá của bạn</label>
+                                <label style={{ color: '#333', fontSize: '16px', fontWeight: '600' }}>Write your review</label>
                                 <textarea name="content" value={inputValues.content} onChange={(event) => handleOnChange(event)} rows="3" className="form-control"></textarea>
                             </div>
                             <div className="content-review">

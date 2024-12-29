@@ -81,7 +81,7 @@ function DetailUserPage(props) {
             image: inputValues.image
         })
         if (res && res.errCode === 0) {
-            toast.success("Cập nhật người dùng thành công")
+            toast.success("User updated successfully")
 
         } else {
             toast.error(res.errMessage)
@@ -92,7 +92,7 @@ function DetailUserPage(props) {
             id: id
         })
         if (res && res.errCode === 0) {
-            toast.success("Vui lòng kiểm tra email !")
+            toast.success("Please check your email !")
         } else {
             toast.error(res.errMessage)
         }

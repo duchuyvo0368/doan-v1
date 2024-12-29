@@ -66,19 +66,19 @@ const ManageReceipt = () => {
            
         })
         if(res && res.errCode == 0){
-            await CommonUtils.exportExcel(res.data,"Danh sách nhập hàng","ListReceipt")
+            await CommonUtils.exportExcel(res.data,"Stock list","ListReceipt")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý nhập hàng</h1>
+            <h1 className="mt-4">Stock management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách nhập hàng
+                    Stock management list
                 </div>
                 <div className="card-body">
                
@@ -93,10 +93,10 @@ const ManageReceipt = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Day nhập hàng</th>
+                                    <th>Product entry date</th>
                                     <th>Supplier name</th>
                                     <th>Phone</th>
-                                    <th>Name nhân viên</th>
+                                    <th>Employee name</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

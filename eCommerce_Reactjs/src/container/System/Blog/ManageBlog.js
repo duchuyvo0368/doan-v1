@@ -116,7 +116,7 @@ const ManageBlog = () => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Manage posts</h1>
+            <h1 className="mt-4">Posts management</h1>
 
 
             <div className="card mb-4">
@@ -128,7 +128,7 @@ const ManageBlog = () => {
               
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tiêu đề"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBlog} />
+                    <FormSearch title={"Title"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchBlog} />
                     </div>
                     <div className='col-8'>
                     <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>

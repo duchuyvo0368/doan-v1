@@ -223,7 +223,7 @@ const Home = () => {
             showYearPicker
             className='form-control col-md-2'
           />
-          <Line options={getOptions('Revenue chart by month of the year')} data={dataLine} />
+          <Line options={getOptions(' Monthly Revenue Chart for the Year')} data={dataLine} />
         </div>
         <div className="col-md-4">
           <form>
@@ -305,7 +305,7 @@ const Home = () => {
             showMonthYearPicker
             className='form-control col-md-2'
           />
-          <Bar options={getOptions('Biểu đồ doanh thu theo từng ngày trong tháng')} data={dataBar} />
+          <Bar options={getOptions('Daily Revenue Chart for the Month')} data={dataBar} />
         </div>
 
       </div>

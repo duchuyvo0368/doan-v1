@@ -25,7 +25,7 @@ const SideBar = () => {
                             Home
                         </Link>
 
-                        <div className="sb-sidenav-menu-heading">Manage</div>
+                        <div className="sb-sidenav-menu-heading">Management</div>
                         {user && user.roleId === "R1" &&
                             <>
                                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -75,7 +75,7 @@ const SideBar = () => {
 
                                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBanner" aria-expanded="false" aria-controls="collapseLayouts">
                                     <div className="sb-nav-link-icon"><i className="fab fa-adversal"></i></div>
-                                    Quản lý băng rôn
+                                    Banner management
                                     <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down" /></div>
                                 </a>
                                 <div className="collapse" id="collapseBanner" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -97,7 +97,7 @@ const SideBar = () => {
                                 </div>
                                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseBlog" aria-expanded="false" aria-controls="collapseLayouts">
                                     <div className="sb-nav-link-icon"><i className="fas fa-feather-alt"></i></div>
-                                    Manage posts
+                                    Posts management
                                     <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down" /></div>
                                 </a>
                                 <div className="collapse" id="collapseBlog" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -108,7 +108,7 @@ const SideBar = () => {
                                 </div>
                                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseShip" aria-expanded="false" aria-controls="collapseLayouts">
                                     <div className="sb-nav-link-icon"><i className="fas fa-shipping-fast"></i></div>
-                                    Manage ship types
+                                    Ship types management
                                     <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down" /></div>
                                 </a>
                                 <div className="collapse" id="collapseShip" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
@@ -119,15 +119,15 @@ const SideBar = () => {
                                 </div>
                                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseVoucher" aria-expanded="false" aria-controls="collapseLayouts">
                                     <div className="sb-nav-link-icon"><i className="fas fa-percentage"></i></div>
-                                    Manage vouchers
+                                     Vouchers management
                                     <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down" /></div>
                                 </a>
                                 <div className="collapse" id="collapseVoucher" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                     <nav className="sb-sidenav-menu-nested nav">
-                                        <Link to={'/admin/list-typevoucher'} className="nav-link" >List of promotion types</Link>
+                                        <Link to={'/admin/list-typevoucher'} className="nav-link" >List of voucher types</Link>
                                         <Link to={'/admin/list-voucher'} className="nav-link" >List of promotional codes</Link>
-                                        <Link to={'/admin/add-typevoucher'} className="nav-link" >Add promotion type</Link>
-                                        <Link to={'/admin/add-voucher'} className="nav-link" >Add promotional code</Link>
+                                        <Link to={'/admin/add-typevoucher'} className="nav-link" >Add voucher type</Link>
+                                        <Link to={'/admin/add-voucher'} className="nav-link" >Add voucher code</Link>
                                     </nav>
                                 </div>
                             </>
@@ -168,7 +168,7 @@ const SideBar = () => {
                         </div>
                         <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseOrder" aria-expanded="false" aria-controls="collapseLayouts">
                             <div className="sb-nav-link-icon"><i class="fa-brands fa-facebook-messenger"></i></div>
-                            Manage messages
+                             Messages management
                             <div className="sb-sidenav-collapse-arrow"><i className="fas fa-angle-down" /></div>
                         </a>
                         <div className="collapse" id="collapseOrder" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">

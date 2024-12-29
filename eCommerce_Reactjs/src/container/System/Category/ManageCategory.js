@@ -46,7 +46,7 @@ const ManageCategory = () => {
         event.preventDefault();
         let res = await DeleteAllCodeService(id)
         if (res && res.errCode === 0) {
-            toast.success("Xóa danh mục thành công")
+            toast.success("Successfully deleted category")
             let arrData = await getListAllCodeService({
 
                 type: 'CATEGORY',
@@ -60,7 +60,7 @@ const ManageCategory = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa danh mục thất bại")
+        } else toast.error("Category deletion failed")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -95,13 +95,13 @@ const ManageCategory = () => {
             keyword:''
         })
         if(res && res.errCode == 0){
-            await CommonUtils.exportExcel(res.data,"Danh sách danh mục","ListCategory")
+            await CommonUtils.exportExcel(res.data,"List of Categories","ListCategory")
         }
        
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý danh mục</h1>
+            <h1 className="mt-4">Category Management</h1>
 
 
             <div className="card mb-4">
@@ -113,7 +113,7 @@ const ManageCategory = () => {
                 
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tên danh mục"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchCategory} />
+                    <FormSearch title={"Category Name"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchCategory} />
                     </div>
                     <div className='col-8'>
                     <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
@@ -125,7 +125,7 @@ const ManageCategory = () => {
                                 <tr>
                                     <th>STT</th>
                                     <th>Name</th>
-                                    <th>mã code</th>
+                                    <th>Code</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

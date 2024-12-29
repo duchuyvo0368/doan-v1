@@ -48,7 +48,7 @@ const ManageProductDetail = () => {
             }
         })
         if (response && response.errCode === 0) {
-            toast.success("Xóa chi tiết sản phẩm thành công !")
+            toast.success("Successfully deleted product details !")
 
             let arrData = await getAllProductDetailByIdService({
 
@@ -63,7 +63,7 @@ const ManageProductDetail = () => {
             }
 
         } else {
-            toast.error("Xóa sản phẩm thất bại")
+            toast.error("Failed to delete product")
         }
     }
     let handleChangePage = async (number) => {
@@ -82,13 +82,13 @@ const ManageProductDetail = () => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý chi tiết sản phẩm</h1>
+            <h1 className="mt-4">Product details management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách chi tiết sản phẩm
+                    Product details list
                     <div className="float-right"><Link to={`/admin/add-product-detail/${id}`}><i style={{ fontSize: '35px', cursor: 'pointer', color: '#0D6EFD' }} className="fas fa-plus-square"></i></Link></div>
                 </div>
                 <div className="card-body">
@@ -97,9 +97,9 @@ const ManageProductDetail = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Name loại sản phẩm</th>
-                                    <th>Giá gốc</th>
-                                    <th>Giá khuyến mãi</th>
+                                    <th>Product type name</th>
+                                    <th>Original price</th>
+                                    <th>Promotional price</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

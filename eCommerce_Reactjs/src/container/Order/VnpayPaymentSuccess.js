@@ -51,7 +51,7 @@ function VnpayPaymentSuccess(props) {
     let createNewOrder = async (data) =>{
         let res = await paymentOrderVnpaySuccessService(data)
         if(res && res.errCode ==0){
-            toast.success("Thanh toán hóa đơn thành công")
+            toast.success("Bill payment successful")
             const userData = JSON.parse(localStorage.getItem('userData'));
             setTimeout(()=>{
                 window.location.href='/user/order/'+userData.id

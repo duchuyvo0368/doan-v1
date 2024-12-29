@@ -86,7 +86,7 @@ const Adduser = (props) => {
                 dob: new Date(birthday).getTime(),
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm mới người dùng thành công")
+                toast.success("User added successfully")
                 setInputValues({
                     ...inputValues,
                     ["firstName"]: '',
@@ -115,7 +115,7 @@ const Adduser = (props) => {
                 dob: isChangeDate === false ? inputValues.dob : new Date(birthday).getTime()
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật người dùng thành công")
+                toast.success("User updated successfully")
 
             } else {
                 toast.error(res.errMessage)
@@ -132,7 +132,7 @@ const Adduser = (props) => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới người dùng' : 'Cập nhật thông tin người dùng'}
+                    {isActionADD === true ? 'Add new user' : 'Update user information'}
                 </div>
                 <div className="card-body">
                     <form>
@@ -148,11 +148,11 @@ const Adduser = (props) => {
                         </div>
                         <div className="form-row">
                             <div className="form-group col-4">
-                                <label htmlFor="inputEmail4">Họ</label>
+                                <label htmlFor="inputEmail4">FirstName</label>
                                 <input type="text" value={inputValues.firstName} name="firstName" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-4">
-                                <label htmlFor="inputEmail4">Name</label>
+                                <label htmlFor="inputEmail4">LastName</label>
                                 <input type="text" value={inputValues.lastName} name="lastName" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-4">
@@ -168,14 +168,14 @@ const Adduser = (props) => {
 
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputCity">Day sinh</label>
+                                <label htmlFor="inputCity">Date of birth</label>
                                 <DatePicker className="form-control" onChange={handleOnChangeDatePicker}
                                     value={birthday}
 
                                 />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputState">Giới tính</label>
+                                <label htmlFor="inputState">Gender</label>
                                 <select value={inputValues.genderId} name="genderId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataGender && dataGender.length > 0 &&
                                         dataGender.map((item, index) => {
@@ -187,7 +187,7 @@ const Adduser = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputZip">Quyền</label>
+                                <label htmlFor="inputZip">Role</label>
                                 <select value={inputValues.roleId} name="roleId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataRole && dataRole.length > 0 &&
                                         dataRole.map((item, index) => {

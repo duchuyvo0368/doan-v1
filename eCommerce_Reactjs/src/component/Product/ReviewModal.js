@@ -44,13 +44,13 @@ const ReviewModal = (props) => {
                 size="md" centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Viết phản hồi đánh giá sản phẩm</h5>
+                    <h5 className="modal-title">Write product review feedback</h5>
                     <button onClick={handleCloseModal} type="button" className="btn btn-time" aria-label="Close">X</button>
                 </div>
                 <ModalBody>
                     <div className="row">
                         <div className="col-12 form-group">
-                            <label>Phản hồi</label>
+                            <label>Feedback</label>
                             <textarea name="content" value={inputValues.content} onChange={(event) => handleOnChange(event)} className="form-control"></textarea>
                         </div>
                     </div>
@@ -60,11 +60,11 @@ const ReviewModal = (props) => {
                         color="primary"
                         onClick={handleSaveInfor}
                     >
-                        Lưu thông tin
+                        Save information
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>
-                        Hủy
+                    Cancel
                     </Button>
                 </ModalFooter>
             </Modal>

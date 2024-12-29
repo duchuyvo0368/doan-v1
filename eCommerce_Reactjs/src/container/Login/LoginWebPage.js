@@ -162,7 +162,7 @@ const LoginWebPage = () => {
                     password: inputValues.password
                 })
                 if (res && res.errCode === 0) {
-                    toast.success("Tạo tài khoản thành công")
+                    toast.success("Account created successfully")
                     handleLoginSocial(re.user.providerData[0].email)
 
 

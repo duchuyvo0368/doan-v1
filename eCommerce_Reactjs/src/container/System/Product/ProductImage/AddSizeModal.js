@@ -73,13 +73,13 @@ const AddSizeModal = (props) => {
                 size="md" centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Thêm kích thước chi tiết sản phẩm</h5>
+                    <h5 className="modal-title">Add product size details</h5>
                     <button onClick={handleCloseModal} type="button" className="btn btn-time" aria-label="Close">X</button>
                 </div>
                 <ModalBody>
                     <div className="row">
                         <div className="col-12 form-group">
-                            <label>Kích thước</label>
+                            <label>Size</label>
                             <select value={inputValues.sizeId} name="sizeId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                 {dataSize && dataSize.length > 0 &&
                                     dataSize.map((item, index) => {
@@ -91,17 +91,17 @@ const AddSizeModal = (props) => {
                             </select>
                         </div>
                         <div className="col-12 form-group">
-                            <label>Chiều rộng</label>
+                            <label>Width</label>
                             <input value={inputValues.width} name="width" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
                         <div className="col-12 form-group">
-                            <label>Chiều dài</label>
+                            <label>Height</label>
                             <input value={inputValues.height} name="height" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
                         <div className="col-12 form-group">
-                            <label>Khối lượng</label>
+                            <label>Volume</label>
                             <input value={inputValues.weight} name="weight" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
@@ -117,7 +117,7 @@ const AddSizeModal = (props) => {
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>
-                        Hủy
+                       Cancel
                     </Button>
                 </ModalFooter>
             </Modal>

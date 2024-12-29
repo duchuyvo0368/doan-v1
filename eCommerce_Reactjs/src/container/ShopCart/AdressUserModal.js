@@ -65,7 +65,7 @@ const AddressUsersModal = (props) => {
                 size="md" centered
             >
                 <div className="modal-header">
-                    <h5 className="modal-title">Địa chỉ mới</h5>
+                    <h5 className="modal-title">New address</h5>
                     <button onClick={handleCloseModal} type="button" className="btn btn-time" aria-label="Close">X</button>
                 </div>
                 <ModalBody>
@@ -87,7 +87,7 @@ const AddressUsersModal = (props) => {
                             />
                         </div>
                         <div className="col-12 form-group">
-                            <label>Địa chỉ cụ thể</label>
+                            <label>Specific address</label>
                             <input value={inputValues.shipAddress} name="shipAddress" onChange={(event) => handleOnChange(event)} type="text" className="form-control"
                             />
                         </div>
@@ -100,11 +100,11 @@ const AddressUsersModal = (props) => {
                         color="primary"
                         onClick={handleSaveInfor}
                     >
-                        Lưu thông tin
+                        Save information
                     </Button>
                     {' '}
                     <Button onClick={handleCloseModal}>
-                        Hủy
+                        Cancel
                     </Button>
                 </ModalFooter>
             </Modal>

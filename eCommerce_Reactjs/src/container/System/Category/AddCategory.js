@@ -46,7 +46,7 @@ const AddCategory = (props) => {
                 type: 'CATEGORY'
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm danh mục thành công")
+                toast.success("Successfully added category")
                 setInputValues({
                     ...inputValues,
                     ["value"]: '',
@@ -56,7 +56,7 @@ const AddCategory = (props) => {
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Thêm danh mục thất bại")
+            else toast.error("Category addition failed")
         } else {
             let res = await UpdateAllCodeService({
                 value: inputValues.value,
@@ -64,26 +64,26 @@ const AddCategory = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật danh mục thành công")
+                toast.success("Successfully updated category")
 
             }
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Cập nhật danh mục thất bại")
+            else toast.error("Category addition failed")
         }
     }
 
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý danh mục</h1>
+            <h1 className="mt-4">Category Management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới danh mục' : 'Cập nhật thông tin danh mục'}
+                    {isActionADD === true ? 'Create New Category' : 'Edit Category Details'}
                 </div>
                 <div className="card-body">
                     <form>

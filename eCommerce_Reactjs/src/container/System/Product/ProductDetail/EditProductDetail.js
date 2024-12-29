@@ -54,40 +54,40 @@ const EditProductDetail = (props) => {
             nameDetail: inputValues.nameDetail
         })
         if (res && res.errCode === 0) {
-            toast.success("Cập nhật loại sản phẩm thành công!")
+            toast.success("Successfully updated product type!")
         } else {
             toast.error(res.errMessage)
         }
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý chi tiết sản phẩm</h1>
+            <h1 className="mt-4">Product details management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Cập nhật chi tiết sản phẩm
+                    Update product details
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Name loại sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product type name</label>
                                 <input type="text" value={inputValues.nameDetail} name="nameDetail" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Giá gốc</label>
+                                <label htmlFor="inputEmail4">Original price</label>
                                 <input type="number" value={inputValues.originalPrice} name="originalPrice" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Giá khuyến mãi</label>
+                                <label htmlFor="inputPassword4">Promotional price</label>
                                 <input type="number" value={inputValues.discountPrice} name="discountPrice" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
 
                         </div>
                         <div className="form-group">
-                            <label htmlFor="inputAddress">Mô tả chi tiết</label>
+                            <label htmlFor="inputAddress">Detailed description</label>
                             <textarea rows="4" value={inputValues.description} name="description" onChange={(event) => handleOnChange(event)} className="form-control"></textarea>
                         </div>
 

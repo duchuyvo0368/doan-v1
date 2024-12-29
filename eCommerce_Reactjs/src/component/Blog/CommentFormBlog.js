@@ -9,7 +9,7 @@ function CommentFormBlog(props) {
     }
     return (
         <div className="comment-form">
-            <h4>Hãy để lại lời bình luận của bạn</h4>
+            <h4>Leave your comment</h4>
             <form className="form-contact comment_form" action="#" id="commentForm">
                 <div className="row">
                     <div className="col-12">
@@ -20,7 +20,7 @@ function CommentFormBlog(props) {
                 
                 </div>
                 <div className="form-group">
-                    <button type='button' onClick={() => handleAddComment()} className="main_btn">Gửi lời bình luận</button>
+                    <button type='button' onClick={() => handleAddComment()} className="main_btn">Submit a comment</button>
                 </div>
             </form>
         </div>

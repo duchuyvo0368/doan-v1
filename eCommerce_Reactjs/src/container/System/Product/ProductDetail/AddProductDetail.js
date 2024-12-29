@@ -62,7 +62,7 @@ const AddProductDetail = (props) => {
             weight: inputValues.weight
         })
         if (res && res.errCode === 0) {
-            toast.success("Tạo mới loại sản phẩm thành công!")
+            toast.success("Successfully created new product type!")
             setInputValues({
                 ...inputValues,
 
@@ -84,52 +84,52 @@ const AddProductDetail = (props) => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý chi tiết sản phẩm</h1>
+            <h1 className="mt-4">Product detail management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Thêm mới chi tiết sản phẩm
+                    Add new product details
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Name loại sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product type name</label>
                                 <input type="text" value={inputValues.nameDetail} name="nameDetail" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Chiều rộng</label>
+                                <label htmlFor="inputEmail4">Width</label>
                                 <input type="text" value={inputValues.width} name="width" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">chiều dài</label>
+                                <label htmlFor="inputPassword4">Height</label>
                                 <input type="text" value={inputValues.height} name="height" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-3">
-                                <label htmlFor="inputEmail4">Giá gốc</label>
+                                <label htmlFor="inputEmail4">Original price</label>
                                 <input type="number" value={inputValues.originalPrice} name="originalPrice" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-3">
-                                <label htmlFor="inputPassword4">Giá khuyến mãi</label>
+                                <label htmlFor="inputPassword4">Promotional price</label>
                                 <input type="number" value={inputValues.discountPrice} name="discountPrice" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Khối lượng</label>
+                                <label htmlFor="inputPassword4">Volume</label>
                                 <input type="text" value={inputValues.weight} name="weight" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                           
                             
                         </div>
                         <div className="form-group">
-                            <label htmlFor="inputAddress">Mô tả chi tiết</label>
+                            <label htmlFor="inputAddress">Detailed description</label>
                             <textarea rows="4" value={inputValues.description} name="description" onChange={(event) => handleOnChange(event)} className="form-control"></textarea>
                         </div>
                         <div className="form-row">
                             
                         <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Kích thước</label>
+                                <label htmlFor="inputPassword4">Size</label>
                                 <select value={inputValues.sizeId} name="sizeId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataSize && dataSize.length > 0 &&
                                         dataSize.map((item, index) => {
@@ -141,14 +141,14 @@ const AddProductDetail = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-3">
-                                <label htmlFor="inputPassword4">Chọn hình ảnh</label>
+                                <label htmlFor="inputPassword4">Select image</label>
                                 <input type="file" id="previewImg" accept=".jpg,.png"
                                     hidden onChange={(event) => handleOnChangeImage(event)}
                                 />
                                 <br></br>
                                 <label style={{ backgroundColor: '#eee', borderRadius: '5px', padding: '6px', cursor: 'pointer' }} className="label-upload" htmlFor="previewImg"
 
-                                >Tải ảnh <i className="fas fa-upload"></i></label>
+                                >Upload image <i className="fas fa-upload"></i></label>
                                 <div style={{ backgroundImage: `url(${inputValues.imageReview})` }} onClick={() => openPreviewImage()} className="box-image"></div>
                             </div>
                         </div>

@@ -42,7 +42,7 @@ const ManageUser = () => {
 
         let res = await DeleteUserService(id)
         if (res && res.errCode === 0) {
-            toast.success("Xóa người dùng thành công")
+            toast.success("User deleted successfully")
             let user = await getAllUsers({
                 limit: PAGINATION.pagerow,
                 offset: numberPage * PAGINATION.pagerow,
@@ -54,7 +54,7 @@ const ManageUser = () => {
                 setCount(Math.ceil(user.count / PAGINATION.pagerow))
             }
         } else {
-            toast.error("Xóa người dùng thất bại")
+            toast.error("Failed to delete user")
         }
     }
     let handleChangePage = async (number) => {
@@ -121,9 +121,9 @@ const ManageUser = () => {
                                     <th>Email</th>
                                     <th>Full Name</th>
                                     <th>Phone</th>
-                                    <th>Day sinh</th>
-                                    <th>Giới tính</th>
-                                    <th>Quyền</th>
+                                    <th>Date of birth</th>
+                                    <th>Gender</th>
+                                    <th>Role</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

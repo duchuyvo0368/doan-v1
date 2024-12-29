@@ -16,7 +16,7 @@ function CategoryUser(props) {
 
         <div className="col-md-3">
             <ul className="list-category">
-                <li className="header">Danh mục</li>
+                <li className="header">Category</li>
                 <li><i style={{ color: '#1e5bb8' }} className="far fa-user"></i> <Link to={`/user/detail/${props.id}`}>My account</Link>
                     <ul>
                         <li><Link to={`/user/detail/${props.id}`}>Profile</Link></li>

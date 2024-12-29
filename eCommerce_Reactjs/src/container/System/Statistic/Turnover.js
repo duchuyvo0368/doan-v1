@@ -43,7 +43,7 @@ const Turnover = (props) => {
                     updatedAt: moment.utc(item.updatedAt).local().format('DD/MM/YYYY HH:mm:ss'),
                     typeShip: item.typeShipData.type,
                     codeVoucher: item.voucherData.codeVoucher,
-                    paymentType: item.isPaymentOnline == 0 ? 'Thanh toán tiền mặt' : 'Thanh toán online',
+                    paymentType: item.isPaymentOnline == 0 ? 'Cash payment' : 'Online payment',
                     statusOrder: item.statusOrderData.value,
                     totalpriceProduct: item.totalpriceProduct,
 
@@ -54,7 +54,7 @@ const Turnover = (props) => {
     }
     let handleOnClickExport = async () => {
 
-        await CommonUtils.exportExcel(dataExport, "Thống kê doanh thu", "TurnOver")
+        await CommonUtils.exportExcel(dataExport, "Revenue statistics", "TurnOver")
     }
 
     return (
@@ -65,7 +65,7 @@ const Turnover = (props) => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Thống kê doanh thu
+                    Sales report
                 </div>
                 <div className="card-body">
                     <form>
@@ -169,11 +169,11 @@ const Turnover = (props) => {
                                                 <td>{moment.utc(item.updatedAt).local().format('DD/MM/YYYY HH:mm:ss')}</td>
                                                 <td>{item.typeShipData.type}</td>
                                                 <td>{item.voucherData.codeVoucher}</td>
-                                                <td>{item.isPaymentOnline == 0 ? 'Thanh toán tiền mặt' : 'Thanh toán online'}</td>
+                                                <td>{item.isPaymentOnline == 0 ? 'Cash payment' : 'Online payment'}</td>
                                                 <td>{item.statusOrderData.value}</td>
                                                 <td>{CommonUtils.formatter.format(item.totalpriceProduct)}</td>
                                                 <td>
-                                                    <Link to={`/admin/order-detail/${item.id}`}>Xem chi tiết</Link>
+                                                    <Link to={`/admin/order-detail/${item.id}`}>View details</Link>
 
 
                                                 </td>

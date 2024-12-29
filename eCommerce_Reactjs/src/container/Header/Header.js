@@ -26,7 +26,7 @@ const Header = (props) => {
       dispatch(getItemCartStart(userData.id));
       socketRef.current.on("getId", (data) => {
         setId(data);
-      }); // phần này đơn giản để gán id cho mỗi phiên kết nối vào page. Mục đích chính là để phân biệt đoạn nào là của mình đang chat.
+      }); 
       fetchListRoom(userData.id);
 
       socketRef.current.on("sendDataServer", (dataGot) => {
@@ -74,7 +74,6 @@ const Header = (props) => {
       <div class="main_menu">
         <div class="container">
           <nav class="navbar navbar-expand-lg navbar-light w-100">
-            {/* <!-- Brand and toggle get grouped for better mobile display --> */}
             <Link to="/" class="navbar-brand logo_h">
               <img src="/resources/img/logo.png" alt="" />
             </Link>
@@ -91,7 +90,6 @@ const Header = (props) => {
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            {/* <!-- Collect the nav links, forms, and other content for toggling --> */}
             <div
               class="collapse navbar-collapse offset w-100"
               id="navbarSupportedContent"

@@ -73,7 +73,7 @@ function StoreVoucher(props) {
                 <div className="col-md-12 border-right border-left">
                     <div className="box-heading">
                         <div className="content-left">
-                            <span>Ví voucher</span>
+                            <span>Voucher wallet</span>
                         </div>
                      
                     </div>

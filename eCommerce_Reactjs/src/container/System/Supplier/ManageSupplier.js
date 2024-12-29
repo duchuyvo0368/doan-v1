@@ -52,7 +52,7 @@ const ManageSupplier = () => {
             }
         })
         if (res && res.errCode === 0) {
-            toast.success("Xóa nhà cung cấp thành công")
+            toast.success("Supplier deleted successfully")
             let arrData = await getAllSupplier({
 
               
@@ -65,7 +65,7 @@ const ManageSupplier = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa nhà cung cấp thất bại")
+        } else toast.error("Failed to delete supplier")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -99,7 +99,7 @@ const ManageSupplier = () => {
             keyword:''
         })
         if(res && res.errCode == 0){
-            await CommonUtils.exportExcel(res.data,"Danh sách nhà cung cấp","ListSupplier")
+            await CommonUtils.exportExcel(res.data,"Supplier list","ListSupplier")
         }
        
     }
@@ -117,7 +117,7 @@ const ManageSupplier = () => {
                
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tên nhà cung cấp"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchSupplier} />
+                    <FormSearch title={"Supplier name"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchSupplier} />
                     </div>
                     <div className='col-8'>
                     <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>

@@ -54,7 +54,7 @@ const AddTypeVoucher = (props) => {
                 minValue: inputValues.minValue
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm loại voucher thành công")
+                toast.success("Voucher added successfully")
                 setInputValues({
                     ...inputValues,
                     ["typeVoucher"]: '',
@@ -66,7 +66,7 @@ const AddTypeVoucher = (props) => {
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Thêm loại voucher thất bại")
+            else toast.error("Failed to add voucher")
         } else {
             let res = await updateTypeVoucherService({
                 typeVoucher: inputValues.typeVoucher,
@@ -76,32 +76,32 @@ const AddTypeVoucher = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật loại voucher thành công")
+                toast.success("Voucher updated successfully")
 
             }
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Cập nhật loại voucher thất bại")
+            else toast.error("Failed to update voucher")
         }
     }
 
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý loại voucher</h1>
+            <h1 className="mt-4">Add voucher types </h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới loại voucher' : 'Cập nhật thông tin loại voucher'}
+                    {isActionADD === true ? 'Add new voucher type' : 'Update voucher type information"'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Loại voucher</label>
+                                <label htmlFor="inputEmail4">Voucher type</label>
                                 <select value={inputValues.typeVoucher} name="typeVoucher" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataTypeVoucher && dataTypeVoucher.length > 0 &&
                                         dataTypeVoucher.map((item, index) => {
@@ -113,15 +113,15 @@ const AddTypeVoucher = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Giá trị</label>
+                                <label htmlFor="inputPassword4">Value</label>
                                 <input type="text" value={inputValues.value} name="value" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Giá trị tối thiểu</label>
+                                <label htmlFor="inputEmail4">Minimum value</label>
                                 <input type="number" value={inputValues.minValue} name="minValue" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Giá trị tối đa</label>
+                                <label htmlFor="inputPassword4">Maximum value</label>
                                 <input type="number" value={inputValues.maxValue} name="maxValue" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>

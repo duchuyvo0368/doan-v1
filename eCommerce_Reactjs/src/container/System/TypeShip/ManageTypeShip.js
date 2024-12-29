@@ -48,7 +48,7 @@ const ManageTypeShip = () => {
             }
         })
         if (res && res.errCode === 0) {
-            toast.success("Xóa loại ship thành công")
+            toast.success("Shipping method deleted successfully")
             let arrData = await getAllTypeShip({
                 limit: PAGINATION.pagerow,
                 offset: numberPage * PAGINATION.pagerow,
@@ -60,7 +60,7 @@ const ManageTypeShip = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa loại ship thất bại")
+        } else toast.error("Failed to delete shipping method")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -93,25 +93,25 @@ const ManageTypeShip = () => {
             keyword: ''
         })
         if (res && res.errCode == 0) {
-            await CommonUtils.exportExcel(res.data, "Danh sách loại ship", "ListTypeShip")
+            await CommonUtils.exportExcel(res.data, "Shipping method list", "ListTypeShip")
         }
 
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý loại ship</h1>
+            <h1 className="mt-4">Shipping methods management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách loại ship
+                    List of ship types
                 </div>
                 <div className="card-body">
 
                     <div className='row'>
                         <div className='col-4'>
-                            <FormSearch title={"tên loại ship"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchTypeShip} />
+                            <FormSearch title={"ship type name"} handleOnchange={handleOnchangeSearch} handleSearch={handleSearchTypeShip} />
                         </div>
                         <div className='col-8'>
                             <button style={{ float: 'right' }} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
@@ -122,8 +122,8 @@ const ManageTypeShip = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Name loại ship</th>
-                                    <th>Giá tiền</th>
+                                    <th>Shipping method name</th>
+                                    <th>Price</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

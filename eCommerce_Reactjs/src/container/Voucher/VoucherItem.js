@@ -20,15 +20,15 @@ function VoucherItem(props) {
                 </div>
                 <div className="content-right">
                     <div className="box-content-right">
-                        <span className="name-voucher">Giảm {props.typeVoucher}</span>
-                        <span className="max-value-voucher">Giảm tối đa {CommonUtils.formatter.format(props.maxValue)}</span>
+                        <span className="name-voucher">Discount {props.typeVoucher}</span>
+                        <span className="max-value-voucher">Maximum discount {CommonUtils.formatter.format(props.maxValue)}</span>
                         <div className="box-percent">
                             <div className="wrap-percent">
                                 <div style={{ width: `${props.widthPercent}%` }} className="percent"></div>
                             </div>
-                            <span className="used-percent">Đã dùng {props.usedAmount}%</span>
+                            <span className="used-percent">Used {props.usedAmount}%</span>
                         </div>
-                        <button onClick={() => handleSaveVoucher()} className="btn-voucher">Lưu</button>
+                        <button onClick={() => handleSaveVoucher()} className="btn-voucher">Save</button>
                     </div>
 
                 </div>

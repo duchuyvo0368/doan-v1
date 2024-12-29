@@ -45,7 +45,7 @@ const AddTypeShip = (props) => {
                 price: inputValues.price,
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm loại ship thành công")
+                toast.success("Shipping method added successfully")
                 setInputValues({
                     ...inputValues,
                     ["type"]: '',
@@ -55,7 +55,7 @@ const AddTypeShip = (props) => {
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Thêm loại ship thất bại")
+            else toast.error("Failed to add shipping method")
         } else {
             let res = await updateTypeShipService({
                 type: inputValues.type,
@@ -63,36 +63,36 @@ const AddTypeShip = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật loại ship thành công")
+                toast.success("Shipping method updated successfully")
 
             }
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Cập nhật loại ship thất bại")
+            else toast.error("Failed to update shipping method")
         }
     }
 
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý loại ship</h1>
+            <h1 className="mt-4">Ship methods management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Thêm mới loại ship' : 'Cập nhật thông tin loại ship'}
+                    {isActionADD === true ? 'Add new shipping method' : 'Update shipping method information'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Name loại ship</label>
+                                <label htmlFor="inputEmail4">Shipping method name</label>
                                 <input type="text" value={inputValues.type} name="type" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Giá tiền</label>
+                                <label htmlFor="inputPassword4">Price</label>
                                 <input type="text" value={inputValues.price} name="price" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                         </div>

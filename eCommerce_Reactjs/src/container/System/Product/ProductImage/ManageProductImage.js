@@ -102,11 +102,11 @@ const ManageProductImage = () => {
                 id: id
             })
             if (response && response.errCode === 0) {
-                toast.success("Thêm hình ảnh thành công !")
+                toast.success("Image added successfully !")
                 setisOpenModal(false)
                 await loadProductDetailImage()
             } else {
-                toast.error("Thêm hình ảnh thất bại !")
+                toast.error("Image addition failed !")
             }
         } else {
             let response = await UpdateProductDetailImageService({
@@ -116,12 +116,12 @@ const ManageProductImage = () => {
             })
             if (response && response.errCode === 0) {
                 setproductImageId('')
-                toast.success("Cập nhật hình ảnh thành công !")
+                toast.success("Image updated successfully !")
                 setisOpenModal(false)
                 await loadProductDetailImage()
 
             } else {
-                toast.error("Cập nhật ảnh thất bại !")
+                toast.error("Image update failed !")
             }
         }
 
@@ -137,12 +137,12 @@ const ManageProductImage = () => {
                 weight: data.weight
             })
             if (response && response.errCode === 0) {
-                toast.success("Thêm kích thước thành công !")
+                toast.success("Size added successfully !")
                 setisOpenModalSize(false)
                 await loadProductDetailSize()
 
             } else {
-                toast.error("Thêm kích thước thất bại")
+                toast.error("Size addition failed")
             }
         } else {
             let response = await UpdateProductDetailSizeService({
@@ -155,12 +155,12 @@ const ManageProductImage = () => {
             })
             if (response && response.errCode === 0) {
                 setproductSizeId('')
-                toast.success("Cập nhật kích thước thành công !")
+                toast.success("Size updated successfully !")
                 setisOpenModalSize(false)
                 await loadProductDetailSize()
 
             } else {
-                toast.error("Cập nhật kích thước thất bại !")
+                toast.error("Size update failed !")
             }
         }
     }
@@ -180,7 +180,7 @@ const ManageProductImage = () => {
             }
         })
         if (response && response.errCode === 0) {
-            toast.success("Xóa hình ảnh thành công !")
+            toast.success("Image deleted successfully !")
             let arrData = await getAllProductDetailImageByIdService({
 
                 id: id,
@@ -193,7 +193,7 @@ const ManageProductImage = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
         } else {
-            toast.error("Xóa hình ảnh thất bại !")
+            toast.error("Image deletion failed !")
         }
     }
     let handleDeleteProductSize = async (productDetailSizeId) => {
@@ -203,7 +203,7 @@ const ManageProductImage = () => {
             }
         })
         if (response && response.errCode === 0) {
-            toast.success("Xóa kích thước thành công !")
+            toast.success("Size deleted successfully !")
             let arrData = await getAllProductDetailSizeByIdService({
 
                 id: id,
@@ -216,7 +216,7 @@ const ManageProductImage = () => {
                 setcountSizes(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
         } else {
-            toast.error("Xóa hình ảnh thất bại !")
+            toast.error("Image deletion failed !")
         }
     }
     let handleChangePage = async (number) => {
@@ -247,13 +247,13 @@ const ManageProductImage = () => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Thông tin chi tiết sản phẩm</h1>
+            <h1 className="mt-4">Product Details</h1>
 
             <div>
                 <div className="card mb-4">
                     <div className="card-header">
                         <i className="fas fa-table me-1" />
-                        Danh sách hình ảnh chi tiết sản phẩm
+                        Product detail image list 
                         <div onClick={() => handleOpenModal()} className="float-right"><i style={{ fontSize: '35px', cursor: 'pointer', color: '#0D6EFD' }} className="fas fa-plus-square"></i></div>
                     </div>
                     <div className="card-body">
@@ -262,8 +262,8 @@ const ManageProductImage = () => {
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Name hình ảnh</th>
-                                        <th>Hình ảnh</th>
+                                        <th>Image name</th>
+                                        <th>Image</th>
                                         <th>Operation</th>
                                     </tr>
                                 </thead>
@@ -332,7 +332,7 @@ const ManageProductImage = () => {
                 <div className="card mb-4">
                     <div className="card-header">
                         <i className="fas fa-table me-1" />
-                        Danh sách kích thước chi tiết sản phẩm
+                        List of product size details
                         <div onClick={() => handleOpenModalSize()} className="float-right"><i style={{ fontSize: '35px', cursor: 'pointer', color: '#0D6EFD' }} className="fas fa-plus-square"></i></div>
                     </div>
                     <div className="card-body">
@@ -341,11 +341,11 @@ const ManageProductImage = () => {
                                 <thead>
                                     <tr>
                                         <th>STT</th>
-                                        <th>Kích thước</th>
-                                        <th>Chiều rộng</th>
-                                        <th>Chiều dài</th>
-                                        <th>Khối lượng</th>
-                                        <th>Số lượng tồn</th>
+                                        <th>Size</th>
+                                        <th>Width</th>
+                                        <th>Length</th>
+                                        <th>Weight</th>
+                                        <th>Quantity in Stock</th>
                                         <th>Operation</th>
                                     </tr>
                                 </thead>

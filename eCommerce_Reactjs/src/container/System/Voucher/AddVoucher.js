@@ -85,7 +85,7 @@ const AddVoucher = (props) => {
                 codeVoucher: inputValues.codeVoucher
             })
             if (response && response.errCode === 0) {
-                toast.success("Tạo mã voucher thành công !")
+                toast.success("Voucher code created successfully !")
                 setInputValues({
                     ...inputValues,
                     ["fromDate"]: '',
@@ -109,40 +109,40 @@ const AddVoucher = (props) => {
                 id: id
             })
             if (response && response.errCode === 0) {
-                toast.success("Cập nhật voucher thành công !")
+                toast.success("Voucher updated successfully !")
 
             } else toast.error(response.errMessage)
         }
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý mã voucher</h1>
+            <h1 className="mt-4">Add voucher code</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {inputValues.isActionADD === true ? 'Thêm mới mã voucherr' : 'Cập nhật thông tin mã voucher'}
+                    {inputValues.isActionADD === true ? 'Add new voucher code' : 'Update voucher code information'}
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Day bắt đầu</label>
+                                <label htmlFor="inputEmail4">Start date</label>
                                 <DatePicker className="form-control" onChange={handleOnChangeDatePickerFromDate}
                                     value={inputValues.fromDate}
 
                                 />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputPassword4">Day kết thúc</label>
+                                <label htmlFor="inputPassword4">End date</label>
                                 <DatePicker className="form-control" onChange={handleOnChangeDatePickerToDate}
                                     value={inputValues.toDate}
 
                                 />
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Loại voucher</label>
+                                <label htmlFor="inputEmail4">Voucher type</label>
                                 <select value={inputValues.typeVoucherId} name="typeVoucherId" onChange={(event) => handleOnChange(event)} id="inputState" className="form-control">
                                     {dataTypeVoucher && dataTypeVoucher.length > 0 &&
                                         dataTypeVoucher.map((item, index) => {
@@ -155,7 +155,7 @@ const AddVoucher = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputPassword4">Số lượng mã</label>
+                                <label htmlFor="inputPassword4">Number of codes</label>
                                 <input type="number" value={inputValues.amount} name="amount" onChange={(event) => handleOnChange(event)} className="form-control" id="inputPassword4" />
                             </div>
                             <div className="form-group col-md-4">

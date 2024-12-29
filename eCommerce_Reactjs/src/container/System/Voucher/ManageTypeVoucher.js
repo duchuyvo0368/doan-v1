@@ -47,7 +47,7 @@ const ManageTypeShip = () => {
             }
         })
         if (res && res.errCode === 0) {
-            toast.success("Xóa loại voucher thành công")
+            toast.success("Voucher type deleted successfully")
             let arrData = await getAllTypeVoucher({
                 limit: PAGINATION.pagerow,
                 offset: numberPage * PAGINATION.pagerow
@@ -58,7 +58,7 @@ const ManageTypeShip = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa loại voucher thất bại")
+        } else toast.error("Failed to delete voucher type")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -80,19 +80,19 @@ const ManageTypeShip = () => {
 
         })
         if (res && res.errCode == 0) {
-            await CommonUtils.exportExcel(res.data, "Danh sách loại voucher", "ListTypeVoucher")
+            await CommonUtils.exportExcel(res.data, "Voucher type list", "ListTypeVoucher")
         }
 
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý loại voucher</h1>
+            <h1 className="mt-4">Voucher type management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách loại voucher
+                    List of voucher types
                 </div>
                 <div className="card-body">
                     <div className='row'>
@@ -106,10 +106,10 @@ const ManageTypeShip = () => {
                             <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Loại voucher</th>
-                                    <th>Giá trị</th>
-                                    <th>Giá trị tối thiểu</th>
-                                    <th>Giá trị tối đa</th>
+                                    <th>Voucher type</th>
+                                    <th>Value</th>
+                                    <th>Minimum value</th>
+                                    <th>Maximum value</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

@@ -45,12 +45,12 @@ const Otp = (props) => {
                 // SMS sent. Prompt user to type the code from the message, then sign the
                 // user in with confirmationResult.confirm(code).
                 window.confirmationResult = confirmationResult;
-                toast.success("Đã gửi mã OTP vào điện thoại")
+                toast.success("OTP code sent to phone")
 
                 // ...
             }).catch((error) => {
                 console.log(error)
-                toast.error("Gửi mã thất bại !")
+                toast.error("Send code failed !")
             });
     }
     const handleOnChange = event => {
@@ -64,7 +64,7 @@ const Otp = (props) => {
         await window.confirmationResult.confirm(code).then((result) => {
             // User signed in successfully.
             const user = result.user;
-            toast.success("Đã xác minh số điện thoại !")
+            toast.success("Phone number verified !")
             let createUser = async () => {
                 let res = await createNewUser({
 
@@ -77,7 +77,7 @@ const Otp = (props) => {
 
                 })
                 if (res && res.errCode === 0) {
-                    toast.success("Tạo tài khoản thành công")
+                    toast.success("Account created successfully")
                     handleLogin(props.dataUser.email, props.dataUser.password)
 
 
@@ -91,7 +91,7 @@ const Otp = (props) => {
         }).catch((error) => {
             // User couldn't sign in (bad verification code?)
             // ...
-            toast.error("Mã OTP không đúng !")
+            toast.error("Incorrect OTP code !")
         });
     }
     let handleLogin = async (email, password) => {
@@ -130,7 +130,7 @@ const Otp = (props) => {
                         <img src="https://raw.githubusercontent.com/Rustcodeweb/OTP-Verification-Card-Design/main/mobile.png" />
                         <h5 style={{ color: '#fff' }} className="mb-2">XÁC THỰC OTP</h5>
                         <div>
-                            <small>Mã đã được gửi tới sdt {props.dataUser && props.dataUser.phoneNumber}</small>
+                            <small>Code has been sent to phone number {props.dataUser && props.dataUser.phoneNumber}</small>
                         </div>
                     </div>
                     <div className="input-container d-flex flex-row justify-content-center mt-2">
@@ -143,13 +143,13 @@ const Otp = (props) => {
                     </div>
                     <div>
                         <small>
-                            Bạn không nhận được Otp ?
-                            <a onClick={() => resendOTP()} style={{ color: '#3366FF' }} className="text-decoration-none ml-2">Gửi lại</a>
+                        You did not receive Otp?
+                            <a onClick={() => resendOTP()} style={{ color: '#3366FF' }} className="text-decoration-none ml-2">Resend</a>
                         </small>
                     </div>
                     <div className="mt-3 mb-5">
                         <div id="sign-in-button"></div>
-                        <button onClick={() => submitOTP()} className="btn btn-success px-4 verify-btn">Xác thực</button>
+                        <button onClick={() => submitOTP()} className="btn btn-success px-4 verify-btn">Authentication</button>
                     </div>
                 </div>
             </div>

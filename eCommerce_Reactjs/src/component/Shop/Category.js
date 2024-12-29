@@ -15,7 +15,7 @@ function Category(props) {
                     createdAt: null,
                     code: 'ALL',
                     type: "CATEGORY",
-                    value: "Tất cả",
+                    value: "All",
                 })
                 setarrCategory(arrData.data)
             }

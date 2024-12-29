@@ -46,7 +46,7 @@ const ManageSubject = () => {
         event.preventDefault();
         let res = await DeleteAllCodeService(id)
         if (res && res.errCode === 0) {
-            toast.success("Xóa chủ đề thành công")
+            toast.success("Topic deleted successfully")
             let arrData = await getListAllCodeService({
 
                 type: 'SUBJECT',
@@ -60,7 +60,7 @@ const ManageSubject = () => {
                 setCount(Math.ceil(arrData.count / PAGINATION.pagerow))
             }
 
-        } else toast.error("Xóa chủ đề thất bại")
+        } else toast.error("Failed to delete topic")
     }
     let handleChangePage = async (number) => {
         setnumberPage(number.selected)
@@ -100,18 +100,18 @@ const ManageSubject = () => {
     }
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý chủ đề</h1>
+            <h1 className="mt-4">List of topics</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Danh sách chủ đề sản phẩm
+                    Product topic management
                 </div>
                 <div className="card-body">
                     <div className='row'>
                     <div  className='col-4'>
-                    <FormSearch title={"tên chủ đề"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchSubject} />
+                    <FormSearch title={"topic name"}  handleOnchange={handleOnchangeSearch} handleSearch={handleSearchSubject} />
                     </div>
                     <div className='col-8'>
                     <button  style={{float:'right'}} onClick={() => handleOnClickExport()} className="btn btn-success" >Export excel <i class="fa-solid fa-file-excel"></i></button>
@@ -123,7 +123,7 @@ const ManageSubject = () => {
                                 <tr>
                                     <th>STT</th>
                                     <th>Name</th>
-                                    <th>mã code</th>
+                                    <th>Code</th>
                                     <th>Operation</th>
                                 </tr>
                             </thead>

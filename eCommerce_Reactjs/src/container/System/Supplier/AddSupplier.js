@@ -52,7 +52,7 @@ const AddSupplier = (props) => {
                 phoneNumber: inputValues.phoneNumber,
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm nhà cung cấp thành công")
+                toast.success("Supplier added successfully")
                 setInputValues({
                     ...inputValues,
                     ["name"]: '',
@@ -64,7 +64,7 @@ const AddSupplier = (props) => {
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Thêm nhà cung cấp thất bại")
+            else toast.error("Failed to add supplier")
         } else {
             let res = await updateSupplierService({
                 name: inputValues.name,
@@ -74,13 +74,13 @@ const AddSupplier = (props) => {
                 id: id
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật nhà cung cấp thành công")
+                toast.success("Supplier updated successfully")
 
             }
             else if (res && res.errCode === 2) {
                 toast.error(res.errMessage)
             }
-            else toast.error("Cập nhật nhà cung cấp thất bại")
+            else toast.error("Failed to update supplier")
         }
     }
 
@@ -93,7 +93,7 @@ const AddSupplier = (props) => {
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    {isActionADD === true ? 'Add new supplier' : 'Cập nhật thông tin nhà cung cấp'}
+                    {isActionADD === true ? 'Add new supplier' : 'Update supplier information'}
                 </div>
                 <div className="card-body">
                     <form>

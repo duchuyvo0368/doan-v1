@@ -30,7 +30,7 @@ function ShopCartPage(props) {
         if (userData) {
             dispatch(getItemCartStart(userData.id))
         } else {
-            toast.error("Hãy đăng nhập để mua hàng")
+            toast.error("Please log in to purchase")
             return;
         }
 
@@ -73,7 +73,7 @@ function ShopCartPage(props) {
                 setisOpenModalAddressUser(true)
             }
         } else {
-            toast.error("Hãy đăng nhập để mua hàng")
+            toast.error("Please log in to purchase")
         }
     }
     let totalPriceDiscount = (price, discount) => {
@@ -103,7 +103,7 @@ function ShopCartPage(props) {
             userId: user.id
         })
         if (res && res.errCode === 0) {
-            toast.success("Thêm địa chỉ thành công !")
+            toast.success("Address added successfully !")
             history.push(`/order/${user.id}`);
         } else {
             toast.error(res.errMessage)
@@ -125,10 +125,10 @@ function ShopCartPage(props) {
                         <thead>
                         <tr>
 
-                            <th scope="col">Sản phẩm</th>
-                            <th scope="col">Giá</th>
-                            <th style={{textAlign: 'center'}} scope="col">Số lượng</th>
-                            <th style={{textAlign: 'center'}} scope="col">Tổng tiền</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th style={{textAlign: 'center'}} scope="col">Quantity</th>
+                            <th style={{textAlign: 'center'}} scope="col">Total amount</th>
                             <th scope="col">Operation</th>
                         </tr>
                         </thead>
@@ -153,7 +153,7 @@ function ShopCartPage(props) {
 
 
                 <h6>
-                    Chọn đơn vị vận chuyển
+                   Select shipping unit
                 </h6>
                 <div>
                     {typeShip && typeShip.length > 0 && typeShip.map((item, index) => {
@@ -178,22 +178,22 @@ function ShopCartPage(props) {
                     <div className="wrap-voucher">
                         <img width="20px" height="20px" style={{marginLeft: "-3px"}} src={storeVoucherLogo}></img>
                         <span className="name-easier">Easier voucher</span>
-                        <span onClick={() => handleOpenModal()} className="choose-voucher">Chọn Hoặc Nhập Mã</span>
+                        <span onClick={() => handleOpenModal()} className="choose-voucher">Select Or Enter Code</span>
                         {dataVoucher && dataVoucher.voucherData && <span
-                            className="choose-voucher">Mã voucher: {dataVoucher.voucherData.codeVoucher}</span>}
+                            className="choose-voucher">Voucher: {dataVoucher.voucherData.codeVoucher}</span>}
 
                     </div>
                 </div>
                 <div className="content-right">
                     <div className="wrap-price">
                             <span
-                                className="text-total">Tổng thanh toán ({dataCart && dataCart.length} sản phẩm): </span>
+                                className="text-total">Total payment ({dataCart && dataCart.length} product): </span>
                         <span
                             className="text-price">{dataVoucher && dataVoucher.voucherData ? CommonUtils.formatter.format(totalPriceDiscount(price, dataVoucher) + priceShip) : CommonUtils.formatter.format(price + (+priceShip))}</span>
                     </div>
 
                     <div className="checkout_btn_inner">
-                        <a onClick={() => handleOpenAddressUserModal()} className="main_btn">Thanh toán</a>
+                        <a onClick={() => handleOpenAddressUserModal()} className="main_btn">Pay</a>
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@ function AddressUser(props) {
 
             })
             if (res && res.errCode === 0) {
-                toast.success("Thêm địa chỉ thành công !")
+                toast.success("Address added successfully !")
                 let res = await getAllAddressUserByUserIdService(props.id)
                 if (res && res.errCode === 0) {
                     setdataAddressUser(res.data)
@@ -61,7 +61,7 @@ function AddressUser(props) {
                 userId: props.id,
             })
             if (res && res.errCode === 0) {
-                toast.success("Cập nhật địa chỉ thành công !")
+                toast.success("Address updated successfully !")
                 let res = await getAllAddressUserByUserIdService(props.id)
                 if (res && res.errCode === 0) {
                     setdataAddressUser(res.data)
@@ -88,14 +88,14 @@ function AddressUser(props) {
             }
         })
         if (res && res.errCode === 0) {
-            toast.success("Xóa địa chỉ user thành công")
+            toast.success("Successfully deleted user address")
             let res = await getAllAddressUserByUserIdService(props.id)
             if (res && res.errCode === 0) {
                 setdataAddressUser(res.data)
 
             }
         } else {
-            toast.error("Xóa địa chỉ user thất bại")
+            toast.error("Delete user address failed")
         }
     }
     let handleEditAddress = (id) => {
@@ -109,12 +109,12 @@ function AddressUser(props) {
                 <div className="col-md-12 border-right border-left">
                     <div className="box-heading">
                         <div className="content-left">
-                            <span>Địa chỉ của tôi</span>
+                            <span>My address</span>
                         </div>
                         <div className="content-right">
                             <div onClick={() => handleOpenAddressUserModal()} className="wrap-add-address">
                                 <i className="fas fa-plus"></i>
-                                <span >Thêm địa chỉ mới</span>
+                                <span >Add new address</span>
                             </div>
                         </div>
                     </div>
@@ -125,9 +125,9 @@ function AddressUser(props) {
                                     <div className='content-left'>
                                         <div className='box-label'>
                                             <div className='label'>
-                                                <div>Họ Và Name</div>
-                                                <div>Số Điện Thoại</div>
-                                                <div>Địa Chỉ</div>
+                                                <div>Full Name</div>
+                                                <div>Phone</div>
+                                                <div>Address</div>
                                             </div>
                                             <div className='content'>
                                                 <div>{item.shipName}</div>
@@ -138,8 +138,8 @@ function AddressUser(props) {
 
                                     </div>
                                     <div className='content-right'>
-                                        <span onClick={() => handleEditAddress(item.id)} className='text-underline'>Sửa</span>
-                                        <span onClick={() => handleDeleteAddress(item.id)} className='text-underline'>Xóa</span>
+                                        <span onClick={() => handleEditAddress(item.id)} className='text-underline'>Edit</span>
+                                        <span onClick={() => handleDeleteAddress(item.id)} className='text-underline'>Delete</span>
                                     </div>
                                 </div>
 

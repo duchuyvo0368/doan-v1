@@ -90,7 +90,7 @@ const DetailReceipt = (props) => {
             price: inputValues.price
         })
         if (res && res.errCode === 0) {
-            toast.success("Thêm nhập chi tiết hàng thành công")
+            toast.success("Stock details added successfully")
             setInputValues({
                 ...inputValues,
 
@@ -102,26 +102,26 @@ const DetailReceipt = (props) => {
         else if (res && res.errCode === 2) {
             toast.error(res.errMessage)
         }
-        else toast.error("Thêm nhập hàng thất bại")
+        else toast.error("Failed to add stock details")
 
     }
 
 
     return (
         <div className="container-fluid px-4">
-            <h1 className="mt-4">Quản lý chi tiết nhập hàng</h1>
+            <h1 className="mt-4">Purchase Detail Management</h1>
 
 
             <div className="card mb-4">
                 <div className="card-header">
                     <i className="fas fa-table me-1" />
-                    Thêm mới chi tiết nhập hàng
+                    Add new purchase details
                 </div>
                 <div className="card-body">
                     <form>
                         <div className="form-row">
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product</label>
                                 <select value={inputValues.productId} name="productId" onChange={(event) => handleOnChangeProduct(event)} id="inputState" className="form-control">
                                     {dataProduct && dataProduct.length > 0 &&
                                         dataProduct.map((item, index) => {
@@ -133,7 +133,7 @@ const DetailReceipt = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Loại sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product type</label>
                                 <select onChange={(event) => handleOnChangeProductDetail(event)} id="inputState" className="form-control">
                                     {dataProductDetail && dataProductDetail.length > 0 &&
                                         dataProductDetail.map((item, index) => {
@@ -145,7 +145,7 @@ const DetailReceipt = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-4">
-                                <label htmlFor="inputEmail4">Size sản phẩm</label>
+                                <label htmlFor="inputEmail4">Product size</label>
                                 <select value={productDetailSizeId} name="productDetailSizeId" onChange={(event) => setproductDetailSizeId(event.target.value)} id="inputState" className="form-control">
                                     {dataProductDetailSize && dataProductDetailSize.length > 0 &&
                                         dataProductDetailSize.map((item, index) => {
@@ -157,11 +157,11 @@ const DetailReceipt = (props) => {
                                 </select>
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Số lượng</label>
+                                <label htmlFor="inputEmail4">Quantity</label>
                                 <input type="number" value={inputValues.quantity} name="quantity" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                             <div className="form-group col-md-6">
-                                <label htmlFor="inputEmail4">Đơn giá</label>
+                                <label htmlFor="inputEmail4">Unit Price</label>
                                 <input type="number" value={inputValues.price} name="price" onChange={(event) => handleOnChange(event)} className="form-control" id="inputEmail4" />
                             </div>
                         </div>
@@ -188,8 +188,8 @@ const DetailReceipt = (props) => {
                                     <th>STT</th>
                                     <th>Single code</th>
                                     <th>Product Name</th>
-                                    <th>Số lượng</th>
-                                    <th>Đơn giá</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
 
                                 </tr>
                             </thead>
