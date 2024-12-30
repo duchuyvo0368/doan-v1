@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64efc297-d07b-4058-9a07-724029f75e95" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/component/Blog/CommentFormBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/component/Blog/CommentFormBlog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/component/Blog/ItemBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/component/Blog/ItemBlog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Blog/DetailBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Blog/DetailBlog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Login/Otp.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Login/Otp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Login/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Login/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Order/OrderHomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Order/OrderHomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Order/VnpayPaymentPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Order/VnpayPaymentPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/AdressUserModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/AdressUserModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/DeleteShopCartModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/DeleteShopCartModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/ShopCartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/ShopCartPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/VoucherModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/ShopCart/VoucherModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Blog/AddBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Blog/AddBlog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Blog/ManageBlog.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Blog/ManageBlog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Category/AddCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Category/AddCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Category/ManageCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Category/ManageCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Email/VerifyEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Email/VerifyEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Order/DetailOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Order/DetailOrder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Order/ManageOrder.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Order/ManageOrder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/AddProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/AddProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/EditProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/EditProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ManageProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ManageProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductDetail/AddProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductDetail/AddProductDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductDetail/EditProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductDetail/EditProductDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductDetail/ManageProductDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductDetail/ManageProductDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductImage/AddImageModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductImage/AddImageModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductImage/AddSizeModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductImage/AddSizeModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductImage/ManageProductImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Product/ProductImage/ManageProductImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Receipt/AddReceipt.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Receipt/AddReceipt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Receipt/DetailReceipt.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Receipt/DetailReceipt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Receipt/ManageReceipt.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Receipt/ManageReceipt.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Statistic/Profit.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Statistic/Profit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Statistic/StockProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Statistic/StockProduct.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Statistic/Turnover.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Statistic/Turnover.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Subject/AddSubject.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Subject/AddSubject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Subject/ManageSubject.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Subject/ManageSubject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Supplier/AddSupplier.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Supplier/AddSupplier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Supplier/ManageSupplier.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Supplier/ManageSupplier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/TypeShip/AddTypeShip.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/TypeShip/AddTypeShip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/TypeShip/ManageTypeShip.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/TypeShip/ManageTypeShip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/Adduser.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/Adduser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/ChangePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/ChangePassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/Information.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/Information.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/ManageUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/User/ManageUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/AddTypeVoucher.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/AddTypeVoucher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/AddVoucher.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/AddVoucher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/ManageTypeVoucher.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/ManageTypeVoucher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/ManageVoucher.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/System/Voucher/ManageVoucher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/AddressUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/AddressUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/CategoryUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/CategoryUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/DetailUserPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/DetailUserPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/OrderUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/OrderUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/PaymentSuccess.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/PaymentSuccess.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/StoreVoucher.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/StoreVoucher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/VoucherItemSmall.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/User/VoucherItemSmall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Voucher/VoucherHomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Voucher/VoucherHomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Voucher/VoucherItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/container/Voucher/VoucherItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eCommerce_Reactjs/src/resources/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/eCommerce_Reactjs/src/resources/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecomAPI/.env" beforeDir="false" afterPath="$PROJECT_DIR$/ecomAPI/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysql/docker-compose.yml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2qslHJFTEJXtQQ45BZbwLWeGsh5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Users/duchuy/Backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64efc297-d07b-4058-9a07-724029f75e95" name="Changes" comment="" />
+      <created>1735459076749</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735459076749</updated>
+      <workItem from="1735459079364" duration="236000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

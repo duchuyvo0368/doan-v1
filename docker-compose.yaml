@@ -1,0 +1,94 @@
+services:
+  frontend: 
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8003
+      - REACT_APP_IS_LOCALHOST=1
+      - REACT_APP_FACEBOOK_APP_ID=572043240792
+      - REACT_APP_ROUTER_BASE_NAME=frontend
+    networks:
+      - network
+    restart: always
+  
+  backend:   
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    container_name: backend
+    ports:
+      - "8003:8003"
+    environment:
+      PORT: 8003
+      NODE_ENV: development
+      URL_REACT: http://localhost:5000
+      EMAIL_APP_PASSWORD: mmjsosujkqttctyd
+      EMAIL_APP: voduchuy016688@gmail.com
+      JWT_SECRET: bingo27062000
+      VNP_TMNCODE: H78YYX0Z
+      VNP_HASHSECRET: FPDHQTHPZYXKWOJWSUYMOIBNRIWEBJZW
+      VNP_URL: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+      VNP_RETURNURL: http://localhost:5000/payment/vnpay_return
+      DATE_VNPAYMENT: 20281230161257
+    networks:
+      - network
+    restart: always
+  
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ecom
+      MYSQL_USER: root
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+  
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - "80:80"  
+      - "443:443"
+    depends_on:
+      - backend
+    volumes:
+      - ./nginx/certs:/etc/ssl/certs
+    networks:
+      - network
+  
+  mobile:
+  
+    expo:
+    build:
+      context: ./mobile
+      dockerfile: Dockerfile
+    container_name: expo-mobile-app
+    ports:
+      - "19000:19000" 
+      - "19001:19001"
+      - "19002:19002"
+      - "8081:8081"   
+    volumes:
+      - .:/mobile     
+      - /mobile/node_modules 
+    stdin_open: true    
+    tty: true           
+
+volumes:
+  db_data:
+networks:
+  network:
+    driver: bridge
+
