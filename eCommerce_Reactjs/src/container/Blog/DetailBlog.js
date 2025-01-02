@@ -107,7 +107,7 @@ function DetailBlog(props) {
                   <h2>{dataBlog.title}</h2>
                   <ul className="blog-info-link mt-3 mb-4">
                     <li><a href="#"><i className="ti-user" /> {dataBlog.userData && dataBlog.userData.firstName + " " + dataBlog.userData.lastName}</a></li>
-                    <li><a href="#"><i className="ti-comments" /> {dataComment.length} Bình luận</a></li>
+                    <li><a href="#"><i className="ti-comments" /> {dataComment.length} Comment</a></li>
                   </ul>
                   <div className="quote-wrapper">
                     <div className="quotes">

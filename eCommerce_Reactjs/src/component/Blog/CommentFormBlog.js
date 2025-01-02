@@ -14,7 +14,7 @@ function CommentFormBlog(props) {
                 <div className="row">
                     <div className="col-12">
                         <div className="form-group">
-                            <textarea value={content} onChange={(e) => setcontent(e.target.value)} className="form-control w-100" name="comment" id="comment" cols={30} rows={9} placeholder="Lời bình luận" defaultValue={""} />
+                            <textarea value={content} onChange={(e) => setcontent(e.target.value)} className="form-control w-100" name="comment" id="comment" cols={30} rows={9} placeholder="Comments" defaultValue={""} />
                         </div>
                     </div>
                 

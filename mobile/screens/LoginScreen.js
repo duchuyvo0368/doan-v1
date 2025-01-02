@@ -44,7 +44,7 @@ const LoginScreen = ({ navigation }) => {
                 source={require('../assets/rn-social-logo.png')}
                 style={styles.logo}
             />
-            <Text style={styles.text}>Eiser Shop</Text>
+            <Text style={styles.text}>Eiser Ship</Text>
 
             <FormInput
                 labelValue={email}
